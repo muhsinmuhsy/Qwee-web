@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Qwee - A Modern Data Management Platform</title>
+    <title>Qwee | The Flexible Workspace for Business Data</title>
     <link rel="icon" type="image/svg+xml" href="file.svg" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,8 +29,7 @@
         <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-gray-100 shadow-sm">
             <div class="container mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-8 py-4">
                 <div class="flex items-center gap-3">
-                    <div
-                        class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#4f46e5] to-[#7c73e9] flex items-center justify-center">
+                    <div class="w-10 h-10 rounded-xl  bg-[#4f46e5]/10 p-1.5 flex items-center justify-center">
                         <img src="file.svg" alt="Qwee Logo" class="w-6 h-6 text-white" />
                     </div>
                     <span class="text-xl font-bold text-gray-900 tracking-tight">Qwee</span>
@@ -56,7 +55,7 @@
 
         <!-- Hero Section -->
         <main>
-            <section class="pt-16 pb-20 px-4 sm:px-6 lg:px-8">
+            <section class="pt-16 pb-10 px-4 sm:px-6 lg:px-8">
                 <div class="max-w-6xl mx-auto text-center">
                     <div
                         class="inline-flex items-center gap-3 bg-gradient-to-r from-[#4f46e5]/10 to-purple-500/10 px-4 py-2 rounded-full mb-8">
@@ -72,8 +71,11 @@
                     </h1>
 
                     <p class="text-xl text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed">
-                        Qwee is a flexible data and operations platform designed for freelancers, small teams, growing
-                        startups, and large organizations — all collaborating from a single, powerful dashboard.
+                        Qwee is a flexible, no-code data platform that lets teams create custom sections, fields, and
+                        records
+                        to manage any type of business data — from clients and products to workflows, reports, and
+                        operations —
+                        all from one powerful workspace.
                     </p>
 
                     <div class="flex flex-col sm:flex-row gap-4 justify-center mb-20">
@@ -160,9 +162,11 @@
                                     </svg>
                                 </div>
                                 <h3 class="text-2xl font-bold text-gray-900 mb-4">Business Data Management</h3>
-                                <p class="text-gray-600 mb-6 leading-relaxed">Manage products, customers, orders,
-                                    invoices, payments, and any business data in fully customizable sections tailored to
-                                    your workflow.</p>
+                                <p class="text-gray-600 mb-6 leading-relaxed">Build and manage any kind of business data
+                                    using fully customizable sections and fields.
+                                    Create structures for clients, leads, projects, inventory, content, or anything your
+                                    workflow requires —
+                                    without being locked into fixed tables or templates.</p>
                                 <ul class="space-y-3">
                                     <li class="flex items-center gap-3">
                                         <div class="w-6 h-6 bg-green-100 rounded-lg flex items-center justify-center">
@@ -214,9 +218,10 @@
                                     </svg>
                                 </div>
                                 <h3 class="text-2xl font-bold text-gray-900 mb-4">Teams & Roles Management</h3>
-                                <p class="text-gray-600 mb-6 leading-relaxed">Add users, assign roles, and control
-                                    exactly who can view, add, edit, or delete data across your entire business
-                                    ecosystem.</p>
+                                <p class="text-gray-600 mb-6 leading-relaxed"> Invite team members and define exactly
+                                    what they can see or change.
+                                    Qwee gives you full control over who can access, edit, or manage each section and
+                                    dataset.</p>
                                 <ul class="space-y-3">
                                     <li class="flex items-center gap-3">
                                         <div class="w-6 h-6 bg-green-100 rounded-lg flex items-center justify-center">
@@ -268,9 +273,10 @@
                                     </svg>
                                 </div>
                                 <h3 class="text-2xl font-bold text-gray-900 mb-4">Advanced Analytics & Insights</h3>
-                                <p class="text-gray-600 mb-6 leading-relaxed">Get real-time insights into your business
-                                    with powerful analytics, smart filters, and clear performance metrics across all
-                                    your data.</p>
+                                <p class="text-gray-600 mb-6 leading-relaxed">Explore, filter, and analyze your data in
+                                    real time using powerful filters and views.
+                                    Find patterns, track progress, and understand what’s happening across all your
+                                    sections.</p>
                                 <ul class="space-y-3">
                                     <li class="flex items-center gap-3">
                                         <div class="w-6 h-6 bg-green-100 rounded-lg flex items-center justify-center">
@@ -325,7 +331,7 @@
                         class="hidden lg:block absolute top-16 left-0 right-0 h-0.5 bg-gradient-to-r from-[#4f46e5]/20 via-[#4f46e5]/10 to-[#4f46e5]/20">
                     </div>
 
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 items-stretch">
                         <div class="relative group">
                             <div class="relative z-10">
                                 <div
@@ -333,7 +339,7 @@
                                     1
                                 </div>
                                 <div
-                                    class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 group-hover:shadow-xl transition-shadow duration-300">
+                                    class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 group-hover:shadow-xl transition-shadow duration-300 h-full flex flex-col">
                                     <h3 class="text-xl font-semibold text-gray-900 mb-3">Create Sections</h3>
                                     <p class="text-gray-600">Set up custom sections like Products, Clients, Invoices, or
                                         any data structure your business requires.</p>
@@ -348,7 +354,7 @@
                                     2
                                 </div>
                                 <div
-                                    class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 group-hover:shadow-xl transition-shadow duration-300">
+                                    class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 group-hover:shadow-xl transition-shadow duration-300 h-full flex flex-col">
                                     <h3 class="text-xl font-semibold text-gray-900 mb-3">Add Fields</h3>
                                     <p class="text-gray-600">Choose from various field types including text, numbers,
                                         prices, emails, dropdowns, and file attachments.</p>
@@ -363,7 +369,7 @@
                                     3
                                 </div>
                                 <div
-                                    class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 group-hover:shadow-xl transition-shadow duration-300">
+                                    class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 group-hover:shadow-xl transition-shadow duration-300 h-full flex flex-col">
                                     <h3 class="text-xl font-semibold text-gray-900 mb-3">Enter Data</h3>
                                     <p class="text-gray-600">Start adding and organizing your business information in a
                                         structured, easily searchable format.</p>
@@ -378,10 +384,10 @@
                                     4
                                 </div>
                                 <div
-                                    class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 group-hover:shadow-xl transition-shadow duration-300">
+                                    class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 group-hover:shadow-xl transition-shadow duration-300 h-full flex flex-col">
                                     <h3 class="text-xl font-semibold text-gray-900 mb-3">Analyze & Control</h3>
-                                    <p class="text-gray-600">Apply filters, gain insights, and manage access with
-                                        customizable roles and permissions.</p>
+                                    <p class="text-gray-600">Filter, search, and analyze your data while controlling who
+                                        can view or edit each section.</p>
                                 </div>
                             </div>
                         </div>
@@ -390,459 +396,745 @@
             </section>
 
             <!-- Built for Every Type of Business Section -->
-            <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-indigo-50/30">
+            <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-gray-50">
                 <div class="max-w-7xl mx-auto">
+                    <!-- Section Header -->
                     <div class="text-center mb-16">
                         <span
-                            class="inline-block px-4 py-2 bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-semibold rounded-full text-sm mb-4">Use
-                            Cases</span>
-                        <h2 class="text-4xl font-bold text-gray-900 mb-6">Trusted Across Industries</h2>
-                        <p class="text-xl text-gray-600 max-w-3xl mx-auto">See how different businesses leverage Qwee to
-                            streamline their unique operations</p>
+                            class="inline-block px-4 py-2 bg-[#4f46e5]/10 text-[#4f46e5] font-semibold rounded-lg text-sm mb-4 uppercase tracking-wider">
+                            Use Cases
+                        </span>
+                        <h2 class="text-4xl font-bold text-gray-900 mb-6">Built for Every Type of Business</h2>
+                        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                            See how different businesses leverage our platform to streamline their unique operations
+                        </p>
                     </div>
 
-                    <!-- Industry Cards with Tabs -->
-                    <div class="mb-10">
-                        <div class="flex flex-wrap justify-center gap-4 mb-12">
-                            <button
-                                class="industry-tab px-6 py-3 rounded-xl font-medium transition-all duration-300 bg-white text-gray-700 border-2 border-gray-200 hover:border-indigo-300 hover:bg-indigo-50 hover:text-indigo-700"
-                                data-industry="retail">
-                                🛍️ Retail & E-commerce
-                            </button>
-                            <button
-                                class="industry-tab px-6 py-3 rounded-xl font-medium transition-all duration-300 bg-white text-gray-700 border-2 border-gray-200 hover:border-purple-300 hover:bg-purple-50 hover:text-purple-700"
-                                data-industry="agency">
-                                🎨 Agencies & Creatives
-                            </button>
-                            <button
-                                class="industry-tab px-6 py-3 rounded-xl font-medium transition-all duration-300 bg-white text-gray-700 border-2 border-gray-200 hover:border-green-300 hover:bg-green-50 hover:text-green-700"
-                                data-industry="startup">
-                                🚀 Startups & Tech
-                            </button>
-                            <button
-                                class="industry-tab px-6 py-3 rounded-xl font-medium transition-all duration-300 bg-white text-gray-700 border-2 border-gray-200 hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700"
-                                data-industry="services">
-                                💼 Professional Services
-                            </button>
-                        </div>
+                    <!-- Tabs Navigation -->
+                    <div class="flex flex-wrap justify-center gap-3 mb-12">
+                        <button
+                            class="tab-btn px-6 py-3 rounded-lg font-medium transition-all duration-300 bg-white text-gray-700 border border-gray-300 hover:border-indigo-500 hover:text-indigo-600 shadow-sm"
+                            data-tab="retail">
+                            <svg class="inline w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                            </svg>
+                            Retail & Inventory
+                        </button>
 
-                        <!-- Industry Content Panels -->
-                        <div id="industry-content" class="relative">
-                            <!-- Retail & E-commerce -->
-                            <div class="industry-panel active" data-industry="retail">
-                                <div class="grid lg:grid-cols-2 gap-12 items-center">
-                                    <div>
-                                        <div class="flex items-center gap-3 mb-6">
+                        <button
+                            class="tab-btn px-6 py-3 rounded-lg font-medium transition-all duration-300 bg-white text-gray-700 border border-gray-300 hover:border-purple-500 hover:text-purple-600 shadow-sm"
+                            data-tab="agency">
+                            <svg class="inline w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                            </svg>
+                            Agencies & Creatives
+                        </button>
+
+                        <button
+                            class="tab-btn px-6 py-3 rounded-lg font-medium transition-all duration-300 bg-white text-gray-700 border border-gray-300 hover:border-green-500 hover:text-green-600 shadow-sm"
+                            data-tab="startup">
+                            <svg class="inline w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                            Startups & Tech
+                        </button>
+
+                        <button
+                            class="tab-btn px-6 py-3 rounded-lg font-medium transition-all duration-300 bg-white text-gray-700 border border-gray-300 hover:border-cyan-500 hover:text-cyan-600 shadow-sm"
+                            data-tab="services">
+                            <svg class="inline w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            Professional Services
+                        </button>
+                    </div>
+
+                    <!-- Tab Content -->
+                    <div class="tab-content">
+                        <!-- Retail & Inventory -->
+                        <div class="tab-panel active" data-tab="retail">
+                            <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+                                <div class="grid lg:grid-cols-3 gap-8">
+                                    <!-- Left Column: Problem/Solution -->
+                                    <div class="lg:col-span-2">
+                                        <div class="flex items-center gap-4 mb-8">
                                             <div
-                                                class="w-12 h-12 bg-gradient-to-br from-indigo-500 to-blue-600 rounded-xl flex items-center justify-center">
-                                                <span class="text-white text-2xl">🛍️</span>
+                                                class="w-14 h-14 bg-gradient-to-br from-[#4f46e5] to-[#7c73e9] rounded-xl flex items-center justify-center">
+                                                <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                                                </svg>
                                             </div>
                                             <div>
-                                                <h3 class="text-2xl font-bold text-gray-900">Retail & E-commerce</h3>
-                                                <p class="text-gray-600">Inventory management made simple</p>
+                                                <h3 class="text-2xl font-bold text-gray-900">Retail & Inventory
+                                                    Solutions</h3>
+                                                <p class="text-gray-600 mt-1">Streamline inventory, orders, and customer
+                                                    management</p>
                                             </div>
                                         </div>
-                                        <div class="space-y-4">
-                                            <div class="flex items-start gap-4">
-                                                <div
-                                                    class="flex-shrink-0 w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center">
-                                                    <svg class="w-5 h-5 text-indigo-600" fill="currentColor"
-                                                        viewBox="0 0 20 20">
-                                                        <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
-                                                        <path fill-rule="evenodd"
-                                                            d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
-                                                            clip-rule="evenodd" />
-                                                    </svg>
-                                                </div>
-                                                <div>
-                                                    <h4 class="font-semibold text-gray-900 mb-1">Inventory Visibility
-                                                    </h4>
-                                                    <p class="text-gray-600">Track stock levels, variants, and suppliers
-                                                        in real-time across all locations</p>
-                                                </div>
-                                            </div>
-                                            <div class="flex items-start gap-4">
-                                                <div
-                                                    class="flex-shrink-0 w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center">
-                                                    <svg class="w-5 h-5 text-indigo-600" fill="currentColor"
-                                                        viewBox="0 0 20 20">
-                                                        <path fill-rule="evenodd"
-                                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                                            clip-rule="evenodd" />
-                                                    </svg>
-                                                </div>
-                                                <div>
-                                                    <h4 class="font-semibold text-gray-900 mb-1">Order Fulfillment</h4>
-                                                    <p class="text-gray-600">Manage customer orders, shipping, and
-                                                        returns from a single dashboard</p>
-                                                </div>
-                                            </div>
-                                            <div class="flex items-start gap-4">
-                                                <div
-                                                    class="flex-shrink-0 w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center">
-                                                    <svg class="w-5 h-5 text-indigo-600" fill="currentColor"
-                                                        viewBox="0 0 20 20">
-                                                        <path fill-rule="evenodd"
-                                                            d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z"
-                                                            clip-rule="evenodd" />
-                                                    </svg>
-                                                </div>
-                                                <div>
-                                                    <h4 class="font-semibold text-gray-900 mb-1">Pricing & Promotions
-                                                    </h4>
-                                                    <p class="text-gray-600">Dynamic pricing rules and promotional
-                                                        campaigns management</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="bg-white rounded-2xl p-6 shadow-xl border border-gray-100">
-                                        <div
-                                            class="aspect-video bg-gradient-to-br from-indigo-50 to-blue-50 rounded-xl flex items-center justify-center mb-4">
-                                            <div class="text-center p-8">
-                                                <div class="text-5xl mb-4">📊</div>
-                                                <h4 class="font-bold text-gray-900 mb-2">Retail Dashboard Preview</h4>
-                                                <p class="text-gray-600 text-sm">Inventory tracking, sales analytics,
-                                                    and customer insights</p>
-                                            </div>
-                                        </div>
-                                        <div class="grid grid-cols-3 gap-4 text-center">
-                                            <div class="bg-indigo-50 rounded-lg p-3">
-                                                <div class="text-lg font-bold text-indigo-700">98%</div>
-                                                <div class="text-xs text-gray-600">Inventory Accuracy</div>
-                                            </div>
-                                            <div class="bg-blue-50 rounded-lg p-3">
-                                                <div class="text-lg font-bold text-blue-700">24/7</div>
-                                                <div class="text-xs text-gray-600">Real-time Updates</div>
-                                            </div>
-                                            <div class="bg-purple-50 rounded-lg p-3">
-                                                <div class="text-lg font-bold text-purple-700">50+</div>
-                                                <div class="text-xs text-gray-600">Integrations</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 
-                            <!-- Agencies & Creatives -->
-                            <div class="industry-panel hidden" data-industry="agency">
-                                <div class="grid lg:grid-cols-2 gap-12 items-center">
-                                    <div>
-                                        <div class="flex items-center gap-3 mb-6">
-                                            <div
-                                                class="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center">
-                                                <span class="text-white text-2xl">🎨</span>
-                                            </div>
-                                            <div>
-                                                <h3 class="text-2xl font-bold text-gray-900">Agencies & Creatives</h3>
-                                                <p class="text-gray-600">Project and client management simplified</p>
-                                            </div>
-                                        </div>
-                                        <div class="space-y-4">
-                                            <div class="flex items-start gap-4">
-                                                <div
-                                                    class="flex-shrink-0 w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
-                                                    <svg class="w-5 h-5 text-purple-600" fill="currentColor"
-                                                        viewBox="0 0 20 20">
-                                                        <path
-                                                            d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" />
-                                                    </svg>
+                                        <div class="grid md:grid-cols-2 gap-6">
+                                            <div class="bg-indigo-50 rounded-xl p-6">
+                                                <div class="flex items-center gap-3 mb-3">
+                                                    <div
+                                                        class="w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center">
+                                                        <svg class="w-5 h-5 text-indigo-600" fill="currentColor"
+                                                            viewBox="0 0 20 20">
+                                                            <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
+                                                            <path fill-rule="evenodd"
+                                                                d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
+                                                                clip-rule="evenodd" />
+                                                        </svg>
+                                                    </div>
+                                                    <h4 class="font-semibold text-gray-900">Inventory Control</h4>
                                                 </div>
-                                                <div>
-                                                    <h4 class="font-semibold text-gray-900 mb-1">Client Management</h4>
-                                                    <p class="text-gray-600">Organize client portfolios, track
-                                                        communications, and manage deliverables</p>
-                                                </div>
+                                                <p class="text-gray-600 text-sm">Track stock, product variants, and supplier data in real time — never run out or overstock again.</p>
                                             </div>
-                                            <div class="flex items-start gap-4">
-                                                <div
-                                                    class="flex-shrink-0 w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
-                                                    <svg class="w-5 h-5 text-purple-600" fill="currentColor"
-                                                        viewBox="0 0 20 20">
-                                                        <path fill-rule="evenodd"
-                                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
-                                                            clip-rule="evenodd" />
-                                                    </svg>
-                                                </div>
-                                                <div>
-                                                    <h4 class="font-semibold text-gray-900 mb-1">Project Tracking</h4>
-                                                    <p class="text-gray-600">Monitor project timelines, milestones, and
-                                                        team workloads</p>
-                                                </div>
-                                            </div>
-                                            <div class="flex items-start gap-4">
-                                                <div
-                                                    class="flex-shrink-0 w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
-                                                    <svg class="w-5 h-5 text-purple-600" fill="currentColor"
-                                                        viewBox="0 0 20 20">
-                                                        <path fill-rule="evenodd"
-                                                            d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z"
-                                                            clip-rule="evenodd" />
-                                                    </svg>
-                                                </div>
-                                                <div>
-                                                    <h4 class="font-semibold text-gray-900 mb-1">Billing & Invoices</h4>
-                                                    <p class="text-gray-600">Automated invoicing, time tracking, and
-                                                        payment processing</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="bg-white rounded-2xl p-6 shadow-xl border border-gray-100">
-                                        <div
-                                            class="aspect-video bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl flex items-center justify-center mb-4">
-                                            <div class="text-center p-8">
-                                                <div class="text-5xl mb-4">📋</div>
-                                                <h4 class="font-bold text-gray-900 mb-2">Agency Dashboard Preview</h4>
-                                                <p class="text-gray-600 text-sm">Project timelines, client portals, and
-                                                    financial tracking</p>
-                                            </div>
-                                        </div>
-                                        <div class="grid grid-cols-3 gap-4 text-center">
-                                            <div class="bg-purple-50 rounded-lg p-3">
-                                                <div class="text-lg font-bold text-purple-700">100+</div>
-                                                <div class="text-xs text-gray-600">Active Projects</div>
-                                            </div>
-                                            <div class="bg-pink-50 rounded-lg p-3">
-                                                <div class="text-lg font-bold text-pink-700">Auto</div>
-                                                <div class="text-xs text-gray-600">Invoicing</div>
-                                            </div>
-                                            <div class="bg-indigo-50 rounded-lg p-3">
-                                                <div class="text-lg font-bold text-indigo-700">95%</div>
-                                                <div class="text-xs text-gray-600">On-time Delivery</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 
-                            <!-- Startups & Tech -->
-                            <div class="industry-panel hidden" data-industry="startup">
-                                <div class="grid lg:grid-cols-2 gap-12 items-center">
-                                    <div>
-                                        <div class="flex items-center gap-3 mb-6">
-                                            <div
-                                                class="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center">
-                                                <span class="text-white text-2xl">🚀</span>
-                                            </div>
-                                            <div>
-                                                <h3 class="text-2xl font-bold text-gray-900">Startups & Tech</h3>
-                                                <p class="text-gray-600">Scale operations without the complexity</p>
-                                            </div>
-                                        </div>
-                                        <div class="space-y-4">
-                                            <div class="flex items-start gap-4">
-                                                <div
-                                                    class="flex-shrink-0 w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
-                                                    <svg class="w-5 h-5 text-green-600" fill="currentColor"
-                                                        viewBox="0 0 20 20">
-                                                        <path fill-rule="evenodd"
-                                                            d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z"
-                                                            clip-rule="evenodd" />
-                                                    </svg>
+                                            <div class="bg-indigo-50 rounded-xl p-6">
+                                                <div class="flex items-center gap-3 mb-3">
+                                                    <div
+                                                        class="w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center">
+                                                        <svg class="w-5 h-5 text-indigo-600" fill="currentColor"
+                                                            viewBox="0 0 20 20">
+                                                            <path fill-rule="evenodd"
+                                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                                                clip-rule="evenodd" />
+                                                        </svg>
+                                                    </div>
+                                                    <h4 class="font-semibold text-gray-900">Order Management</h4>
                                                 </div>
-                                                <div>
-                                                    <h4 class="font-semibold text-gray-900 mb-1">Rapid Scaling</h4>
-                                                    <p class="text-gray-600">Add new data types and workflows as your
-                                                        business grows</p>
-                                                </div>
+                                                <p class="text-gray-600 text-sm">View, update, and organize orders from one place with custom fields and statuses.</p>
                                             </div>
-                                            <div class="flex items-start gap-4">
-                                                <div
-                                                    class="flex-shrink-0 w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
-                                                    <svg class="w-5 h-5 text-green-600" fill="currentColor"
-                                                        viewBox="0 0 20 20">
-                                                        <path
-                                                            d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z" />
-                                                    </svg>
-                                                </div>
-                                                <div>
-                                                    <h4 class="font-semibold text-gray-900 mb-1">Team Collaboration</h4>
-                                                    <p class="text-gray-600">Real-time collaboration with customizable
-                                                        roles and permissions</p>
-                                                </div>
-                                            </div>
-                                            <div class="flex items-start gap-4">
-                                                <div
-                                                    class="flex-shrink-0 w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
-                                                    <svg class="w-5 h-5 text-green-600" fill="currentColor"
-                                                        viewBox="0 0 20 20">
-                                                        <path fill-rule="evenodd"
-                                                            d="M5 2a1 1 0 011 1v1h1a1 1 0 010 2H6v1a1 1 0 01-2 0V6H3a1 1 0 010-2h1V3a1 1 0 011-1zm0 10a1 1 0 011 1v1h1a1 1 0 110 2H6v1a1 1 0 11-2 0v-1H3a1 1 0 110-2h1v-1a1 1 0 011-1zM12 2a1 1 0 01.967.744L14.146 7.2 17.5 9.134a1 1 0 010 1.732l-3.354 1.935-1.18 4.455a1 1 0 01-1.933 0L9.854 12.2 6.5 10.266a1 1 0 010-1.732l3.354-1.935 1.18-4.455A1 1 0 0112 2z"
-                                                            clip-rule="evenodd" />
-                                                    </svg>
-                                                </div>
-                                                <div>
-                                                    <h4 class="font-semibold text-gray-900 mb-1">Data Analytics</h4>
-                                                    <p class="text-gray-600">Make data-driven decisions with
-                                                        customizable dashboards</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="bg-white rounded-2xl p-6 shadow-xl border border-gray-100">
-                                        <div
-                                            class="aspect-video bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl flex items-center justify-center mb-4">
-                                            <div class="text-center p-8">
-                                                <div class="text-5xl mb-4">📈</div>
-                                                <h4 class="font-bold text-gray-900 mb-2">Startup Dashboard Preview</h4>
-                                                <p class="text-gray-600 text-sm">Growth metrics, team performance, and
-                                                    operational efficiency</p>
-                                            </div>
-                                        </div>
-                                        <div class="grid grid-cols-3 gap-4 text-center">
-                                            <div class="bg-green-50 rounded-lg p-3">
-                                                <div class="text-lg font-bold text-green-700">10x</div>
-                                                <div class="text-xs text-gray-600">Faster Setup</div>
-                                            </div>
-                                            <div class="bg-emerald-50 rounded-lg p-3">
-                                                <div class="text-lg font-bold text-emerald-700">API</div>
-                                                <div class="text-xs text-gray-600">Ready</div>
-                                            </div>
-                                            <div class="bg-teal-50 rounded-lg p-3">
-                                                <div class="text-lg font-bold text-teal-700">Unlimited</div>
-                                                <div class="text-xs text-gray-600">Users</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 
-                            <!-- Professional Services -->
-                            <div class="industry-panel hidden" data-industry="services">
-                                <div class="grid lg:grid-cols-2 gap-12 items-center">
-                                    <div>
-                                        <div class="flex items-center gap-3 mb-6">
-                                            <div
-                                                class="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center">
-                                                <span class="text-white text-2xl">💼</span>
+                                            <div class="bg-indigo-50 rounded-xl p-6">
+                                                <div class="flex items-center gap-3 mb-3">
+                                                    <div
+                                                        class="w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center">
+                                                        <svg class="w-5 h-5 text-indigo-600" fill="currentColor"
+                                                            viewBox="0 0 20 20">
+                                                            <path fill-rule="evenodd"
+                                                                d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z"
+                                                                clip-rule="evenodd" />
+                                                        </svg>
+                                                    </div>
+                                                    <h4 class="font-semibold text-gray-900">Customer Database</h4>
+                                                </div>
+                                                <p class="text-gray-600 text-sm">Store customer details, purchase history, and notes to build stronger relationships.</p>
                                             </div>
-                                            <div>
-                                                <h3 class="text-2xl font-bold text-gray-900">Professional Services</h3>
-                                                <p class="text-gray-600">Efficient client and project management</p>
-                                            </div>
-                                        </div>
-                                        <div class="space-y-4">
-                                            <div class="flex items-start gap-4">
-                                                <div
-                                                    class="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
-                                                    <svg class="w-5 h-5 text-blue-600" fill="currentColor"
-                                                        viewBox="0 0 20 20">
-                                                        <path fill-rule="evenodd"
-                                                            d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
-                                                            clip-rule="evenodd" />
-                                                    </svg>
+
+                                            <div class="bg-indigo-50 rounded-xl p-6">
+                                                <div class="flex items-center gap-3 mb-3">
+                                                    <div
+                                                        class="w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center">
+                                                        <svg class="w-5 h-5 text-indigo-600" fill="currentColor"
+                                                            viewBox="0 0 20 20">
+                                                            <path fill-rule="evenodd"
+                                                                d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z"
+                                                                clip-rule="evenodd" />
+                                                        </svg>
+                                                    </div>
+                                                    <h4 class="font-semibold text-gray-900">Smart Filters & Search</h4>
                                                 </div>
-                                                <div>
-                                                    <h4 class="font-semibold text-gray-900 mb-1">Client Portals</h4>
-                                                    <p class="text-gray-600">Secure client portals for document sharing
-                                                        and communication</p>
-                                                </div>
-                                            </div>
-                                            <div class="flex items-start gap-4">
-                                                <div
-                                                    class="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
-                                                    <svg class="w-5 h-5 text-blue-600" fill="currentColor"
-                                                        viewBox="0 0 20 20">
-                                                        <path fill-rule="evenodd"
-                                                            d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-                                                            clip-rule="evenodd" />
-                                                    </svg>
-                                                </div>
-                                                <div>
-                                                    <h4 class="font-semibold text-gray-900 mb-1">Time Tracking</h4>
-                                                    <p class="text-gray-600">Billable hours tracking and timesheet
-                                                        management</p>
-                                                </div>
-                                            </div>
-                                            <div class="flex items-start gap-4">
-                                                <div
-                                                    class="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
-                                                    <svg class="w-5 h-5 text-blue-600" fill="currentColor"
-                                                        viewBox="0 0 20 20">
-                                                        <path
-                                                            d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z" />
-                                                        <path fill-rule="evenodd"
-                                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"
-                                                            clip-rule="evenodd" />
-                                                    </svg>
-                                                </div>
-                                                <div>
-                                                    <h4 class="font-semibold text-gray-900 mb-1">Financial Management
-                                                    </h4>
-                                                    <p class="text-gray-600">Invoicing, expense tracking, and financial
-                                                        reporting</p>
-                                                </div>
+                                                <p class="text-gray-600 text-sm">Instantly find orders, products, or customers using powerful filters.</p>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="bg-white rounded-2xl p-6 shadow-xl border border-gray-100">
+
+                                    <!-- Right Column: Benefits/Features -->
+                                    <div class="lg:col-span-1">
                                         <div
-                                            class="aspect-video bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl flex items-center justify-center mb-4">
-                                            <div class="text-center p-8">
-                                                <div class="text-5xl mb-4">📋</div>
-                                                <h4 class="font-bold text-gray-900 mb-2">Services Dashboard Preview</h4>
-                                                <p class="text-gray-600 text-sm">Client management, billing, and project
-                                                    oversight</p>
-                                            </div>
-                                        </div>
-                                        <div class="grid grid-cols-3 gap-4 text-center">
-                                            <div class="bg-blue-50 rounded-lg p-3">
-                                                <div class="text-lg font-bold text-blue-700">99%</div>
-                                                <div class="text-xs text-gray-600">Client Retention</div>
-                                            </div>
-                                            <div class="bg-cyan-50 rounded-lg p-3">
-                                                <div class="text-lg font-bold text-cyan-700">Auto</div>
-                                                <div class="text-xs text-gray-600">Billing</div>
-                                            </div>
-                                            <div class="bg-sky-50 rounded-lg p-3">
-                                                <div class="text-lg font-bold text-sky-700">24h</div>
-                                                <div class="text-xs text-gray-600">Response Time</div>
+                                            class="bg-gradient-to-br from-[#4f46e5] to-[#7c73e9] rounded-2xl p-6 text-white h-full">
+                                            <h4 class="text-xl font-bold mb-4">Key Benefits</h4>
+                                            <ul class="space-y-4">
+                                                <li class="flex items-start gap-3">
+                                                    <svg class="w-5 h-5 text-indigo-200 flex-shrink-0 mt-0.5"
+                                                        fill="currentColor" viewBox="0 0 20 20">
+                                                        <path fill-rule="evenodd"
+                                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                    <span>Reduce manual work and errors</span>
+                                                </li>
+                                                <li class="flex items-start gap-3">
+                                                    <svg class="w-5 h-5 text-indigo-200 flex-shrink-0 mt-0.5"
+                                                        fill="currentColor" viewBox="0 0 20 20">
+                                                        <path fill-rule="evenodd"
+                                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                    <span>Keep inventory and orders in sync</span>
+                                                </li>
+                                                <li class="flex items-start gap-3">
+                                                    <svg class="w-5 h-5 text-indigo-200 flex-shrink-0 mt-0.5"
+                                                        fill="currentColor" viewBox="0 0 20 20">
+                                                        <path fill-rule="evenodd"
+                                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                    <span>Get a clear view of sales and customers</span>
+                                                </li>
+                                                <li class="flex items-start gap-3">
+                                                    <svg class="w-5 h-5 text-indigo-200 flex-shrink-0 mt-0.5"
+                                                        fill="currentColor" viewBox="0 0 20 20">
+                                                        <path fill-rule="evenodd"
+                                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                    <span>Build custom workflows without coding</span>
+                                                </li>
+                                                <li class="flex items-start gap-3">
+                                                    <svg class="w-5 h-5 text-indigo-200 flex-shrink-0 mt-0.5"
+                                                        fill="currentColor" viewBox="0 0 20 20">
+                                                        <path fill-rule="evenodd"
+                                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                    <span>Scale from small store to large operation</span>
+                                                </li>
+                                            </ul>
+
+                                            <div class="mt-8 pt-6 border-t border-indigo-400">
+                                                <div class="text-sm text-indigo-200 mb-2">Typical Users</div>
+                                                <div class="flex flex-wrap gap-2">
+                                                    <span class="px-3 py-1 bg-indigo-400/30 rounded-full text-sm">Store Owners</span>
+                                                    <span
+                                                        class="px-3 py-1 bg-indigo-400/30 rounded-full text-sm">Retail
+                                                        Teams</span>
+                                                    <span
+                                                        class="px-3 py-1 bg-indigo-400/30 rounded-full text-sm">E-commerce
+                                                        Owners</span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Industry Statistics -->
-                    <div class="mt-16 bg-white rounded-2xl shadow-lg border border-gray-100 p-8">
-                        <h3 class="text-2xl font-bold text-center text-gray-900 mb-8">Proven Results Across Industries
-                        </h3>
-                        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                            <div class="text-center">
-                                <div class="text-3xl font-bold text-indigo-600 mb-2">40%</div>
-                                <p class="text-gray-700 font-medium">Reduction in admin time</p>
-                                <p class="text-sm text-gray-500">Average across all users</p>
+                        <!-- Agencies & Creatives -->
+                        <div class="tab-panel hidden" data-tab="agency">
+                            <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+                                <div class="grid lg:grid-cols-3 gap-8">
+                                    <div class="lg:col-span-2">
+                                        <div class="flex items-center gap-4 mb-8">
+                                            <div
+                                                class="w-14 h-14 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center">
+                                                <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <h3 class="text-2xl font-bold text-gray-900">Agency & Creative Solutions
+                                                </h3>
+                                                <p class="text-gray-600 mt-1">Manage clients, projects, and creative
+                                                    workflows efficiently</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="grid md:grid-cols-2 gap-6">
+                                            <div class="bg-purple-50 rounded-xl p-6">
+                                                <div class="flex items-center gap-3 mb-3">
+                                                    <div
+                                                        class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
+                                                        <svg class="w-5 h-5 text-purple-600" fill="currentColor"
+                                                            viewBox="0 0 20 20">
+                                                            <path
+                                                                d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" />
+                                                        </svg>
+                                                    </div>
+                                                    <h4 class="font-semibold text-gray-900">Client Sections</h4>
+                                                </div>
+                                                <p class="text-gray-600 text-sm">Create a Clients section with contact info, contracts, notes, and communication history..</p>
+                                            </div>
+
+                                            <div class="bg-purple-50 rounded-xl p-6">
+                                                <div class="flex items-center gap-3 mb-3">
+                                                    <div
+                                                        class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
+                                                        <svg class="w-5 h-5 text-purple-600" fill="currentColor"
+                                                            viewBox="0 0 20 20">
+                                                            <path fill-rule="evenodd"
+                                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+                                                                clip-rule="evenodd" />
+                                                        </svg>
+                                                    </div>
+                                                    <h4 class="font-semibold text-gray-900">Project Tracking</h4>
+                                                </div>
+                                                <p class="text-gray-600 text-sm">Monitor project progress, deadlines,
+                                                    and deliverables with real-time updates.</p>
+                                            </div>
+
+                                            <div class="bg-purple-50 rounded-xl p-6">
+                                                <div class="flex items-center gap-3 mb-3">
+                                                    <div
+                                                        class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
+                                                        <svg class="w-5 h-5 text-purple-600" fill="currentColor"
+                                                            viewBox="0 0 20 20">
+                                                            <path fill-rule="evenodd"
+                                                                d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z"
+                                                                clip-rule="evenodd" />
+                                                        </svg>
+                                                    </div>
+                                                    <h4 class="font-semibold text-gray-900">Team & Workload Data</h4>
+                                                </div>
+                                                <p class="text-gray-600 text-sm">Store who is working on what, hours spent, and assignments in structured tables.</p>
+                                            </div>
+
+                                            <div class="bg-purple-50 rounded-xl p-6">
+                                                <div class="flex items-center gap-3 mb-3">
+                                                    <div
+                                                        class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
+                                                        <svg class="w-5 h-5 text-purple-600" fill="currentColor"
+                                                            viewBox="0 0 20 20">
+                                                            <path fill-rule="evenodd"
+                                                                d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z"
+                                                                clip-rule="evenodd" />
+                                                        </svg>
+                                                    </div>
+                                                    <h4 class="font-semibold text-gray-900">Creative Assets</h4>
+                                                </div>
+                                                <p class="text-gray-600 text-sm">Upload and organize files, designs, and versions inside project records..</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="lg:col-span-1">
+                                        <div
+                                            class="bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl p-6 text-white h-full">
+                                            <h4 class="text-xl font-bold mb-4">Key Benefits</h4>
+                                            <ul class="space-y-4">
+                                                <li class="flex items-start gap-3">
+                                                    <svg class="w-5 h-5 text-purple-200 flex-shrink-0 mt-0.5"
+                                                        fill="currentColor" viewBox="0 0 20 20">
+                                                        <path fill-rule="evenodd"
+                                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                    <span>One place for clients, projects, and assets</span>
+                                                </li>
+                                                <li class="flex items-start gap-3">
+                                                    <svg class="w-5 h-5 text-purple-200 flex-shrink-0 mt-0.5"
+                                                        fill="currentColor" viewBox="0 0 20 20">
+                                                        <path fill-rule="evenodd"
+                                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                    <span>Replace spreadsheets, and scattered tools</span>
+                                                </li>
+                                                <li class="flex items-start gap-3">
+                                                    <svg class="w-5 h-5 text-purple-200 flex-shrink-0 mt-0.5"
+                                                        fill="currentColor" viewBox="0 0 20 20">
+                                                        <path fill-rule="evenodd"
+                                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                    <span>Reduce administrative overhead</span>
+                                                </li>
+                                                <li class="flex items-start gap-3">
+                                                    <svg class="w-5 h-5 text-purple-200 flex-shrink-0 mt-0.5"
+                                                        fill="currentColor" viewBox="0 0 20 20">
+                                                        <path fill-rule="evenodd"
+                                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                    <span>See what’s on track and what needs attention</span>
+                                                </li>
+                                                <li class="flex items-start gap-3">
+                                                    <svg class="w-5 h-5 text-purple-200 flex-shrink-0 mt-0.5"
+                                                        fill="currentColor" viewBox="0 0 20 20">
+                                                        <path fill-rule="evenodd"
+                                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                    <span>Scale from small agency to large team</span>
+                                                </li>
+                                            </ul>
+
+                                            <div class="mt-8 pt-6 border-t border-purple-400">
+                                                <div class="text-sm text-purple-200 mb-2">Typical Users</div>
+                                                <div class="flex flex-wrap gap-2">
+                                                    <span class="px-3 py-1 bg-purple-400/30 rounded-full text-sm">Agency
+                                                        Owners</span>
+                                                    <span
+                                                        class="px-3 py-1 bg-purple-400/30 rounded-full text-sm">Project
+                                                        Managers</span>
+                                                    <span
+                                                        class="px-3 py-1 bg-purple-400/30 rounded-full text-sm">Creative
+                                                        Teams</span>
+                                                    <span
+                                                        class="px-3 py-1 bg-purple-400/30 rounded-full text-sm">Freelancers</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="text-center">
-                                <div class="text-3xl font-bold text-purple-600 mb-2">95%</div>
-                                <p class="text-gray-700 font-medium">Data accuracy improvement</p>
-                                <p class="text-sm text-gray-500">Real-time synchronization</p>
+                        </div>
+
+                        <!-- Startups & Tech -->
+                        <div class="tab-panel hidden" data-tab="startup">
+                            <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+                                <div class="grid lg:grid-cols-3 gap-8">
+                                    <div class="lg:col-span-2">
+                                        <div class="flex items-center gap-4 mb-8">
+                                            <div
+                                                class="w-14 h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center">
+                                                <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <h3 class="text-2xl font-bold text-gray-900">Startup & Tech Solutions
+                                                </h3>
+                                                <p class="text-gray-600 mt-1">Build internal tools and scale operations
+                                                    without engineering</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="grid md:grid-cols-2 gap-6">
+                                            <div class="bg-green-50 rounded-xl p-6">
+                                                <div class="flex items-center gap-3 mb-3">
+                                                    <div
+                                                        class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
+                                                        <svg class="w-5 h-5 text-green-600" fill="currentColor"
+                                                            viewBox="0 0 20 20">
+                                                            <path fill-rule="evenodd"
+                                                                d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z"
+                                                                clip-rule="evenodd" />
+                                                        </svg>
+                                                    </div>
+                                                    <h4 class="font-semibold text-gray-900">Product & Feature Tracking</h4>
+                                                </div>
+                                                <p class="text-gray-600 text-sm">Create Features, Feedback, and Bugs sections to track what you’re building and what users want.</p>
+                                            </div>
+
+                                            <div class="bg-green-50 rounded-xl p-6">
+                                                <div class="flex items-center gap-3 mb-3">
+                                                    <div
+                                                        class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
+                                                        <svg class="w-5 h-5 text-green-600" fill="currentColor"
+                                                            viewBox="0 0 20 20">
+                                                            <path
+                                                                d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z" />
+                                                        </svg>
+                                                    </div>
+                                                    <h4 class="font-semibold text-gray-900">Team & Operations Data
+</h4>
+                                                </div>
+                                                <p class="text-gray-600 text-sm">Manage tasks, ownership, and status using structured tables instead of messy docs.</p>
+                                            </div>
+
+                                            <div class="bg-green-50 rounded-xl p-6">
+                                                <div class="flex items-center gap-3 mb-3">
+                                                    <div
+                                                        class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
+                                                        <svg class="w-5 h-5 text-green-600" fill="currentColor"
+                                                            viewBox="0 0 20 20">
+                                                            <path fill-rule="evenodd"
+                                                                d="M5 2a1 1 0 011 1v1h1a1 1 0 010 2H6v1a1 1 0 01-2 0V6H3a1 1 0 010-2h1V3a1 1 0 011-1zm0 10a1 1 0 011 1v1h1a1 1 0 110 2H6v1a1 1 0 11-2 0v-1H3a1 1 0 110-2h1v-1a1 1 0 011-1zM12 2a1 1 0 01.967.744L14.146 7.2 17.5 9.134a1 1 0 010 1.732l-3.354 1.935-1.18 4.455a1 1 0 01-1.933 0L9.854 12.2 6.5 10.266a1 1 0 010-1.732l3.354-1.935 1.18-4.455A1 1 0 0112 2z"
+                                                                clip-rule="evenodd" />
+                                                        </svg>
+                                                    </div>
+                                                    <h4 class="font-semibold text-gray-900">Metrics & Growth Data</h4>
+                                                </div>
+                                                <p class="text-gray-600 text-sm">Store and analyze KPIs, signups, revenue, and usage with powerful filters.</p>
+                                            </div>
+
+                                            <div class="bg-green-50 rounded-xl p-6">
+                                                <div class="flex items-center gap-3 mb-3">
+                                                    <div
+                                                        class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
+                                                        <svg class="w-5 h-5 text-green-600" fill="currentColor"
+                                                            viewBox="0 0 20 20">
+                                                            <path fill-rule="evenodd"
+                                                                d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                                                                clip-rule="evenodd" />
+                                                        </svg>
+                                                    </div>
+                                                    <h4 class="font-semibold text-gray-900">Investor & Milestone Records</h4>
+                                                </div>
+                                                <p class="text-gray-600 text-sm">Track goals, funding rounds, updates, and progress in one organized system.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="lg:col-span-1">
+                                        <div
+                                            class="bg-gradient-to-br from-green-500 to-green-600 rounded-2xl p-6 text-white h-full">
+                                            <h4 class="text-xl font-bold mb-4">Key Benefits</h4>
+                                            <ul class="space-y-4">
+                                                <li class="flex items-start gap-3">
+                                                    <svg class="w-5 h-5 text-green-200 flex-shrink-0 mt-0.5"
+                                                        fill="currentColor" viewBox="0 0 20 20">
+                                                        <path fill-rule="evenodd"
+                                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                    <span>Scale without additional engineering</span>
+                                                </li>
+                                                <li class="flex items-start gap-3">
+                                                    <svg class="w-5 h-5 text-green-200 flex-shrink-0 mt-0.5"
+                                                        fill="currentColor" viewBox="0 0 20 20">
+                                                        <path fill-rule="evenodd"
+                                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                    <span>Reduce time to market</span>
+                                                </li>
+                                                <li class="flex items-start gap-3">
+                                                    <svg class="w-5 h-5 text-green-200 flex-shrink-0 mt-0.5"
+                                                        fill="currentColor" viewBox="0 0 20 20">
+                                                        <path fill-rule="evenodd"
+                                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                    <span>Make data-driven decisions</span>
+                                                </li>
+                                                <li class="flex items-start gap-3">
+                                                    <svg class="w-5 h-5 text-green-200 flex-shrink-0 mt-0.5"
+                                                        fill="currentColor" viewBox="0 0 20 20">
+                                                        <path fill-rule="evenodd"
+                                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                    <span>Improve team productivity</span>
+                                                </li>
+                                                <li class="flex items-start gap-3">
+                                                    <svg class="w-5 h-5 text-green-200 flex-shrink-0 mt-0.5"
+                                                        fill="currentColor" viewBox="0 0 20 20">
+                                                        <path fill-rule="evenodd"
+                                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                    <span>Centralize business operations</span>
+                                                </li>
+                                            </ul>
+
+                                            <div class="mt-8 pt-6 border-t border-green-400">
+                                                <div class="text-sm text-green-200 mb-2">Typical Users</div>
+                                                <div class="flex flex-wrap gap-2">
+                                                    <span
+                                                        class="px-3 py-1 bg-green-400/30 rounded-full text-sm">Founders</span>
+                                                    <span class="px-3 py-1 bg-green-400/30 rounded-full text-sm">Product
+                                                        Managers</span>
+                                                    <span
+                                                        class="px-3 py-1 bg-green-400/30 rounded-full text-sm">Operations
+                                                        Teams</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="text-center">
-                                <div class="text-3xl font-bold text-green-600 mb-2">30+</div>
-                                <p class="text-gray-700 font-medium">Industry verticals</p>
-                                <p class="text-sm text-gray-500">Successfully deployed</p>
-                            </div>
-                            <div class="text-center">
-                                <div class="text-3xl font-bold text-blue-600 mb-2">10,000+</div>
-                                <p class="text-gray-700 font-medium">Businesses powered</p>
-                                <p class="text-sm text-gray-500">Globally</p>
+                        </div>
+
+                        <!-- Professional Services -->
+                        <div class="tab-panel hidden" data-tab="services">
+                            <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+                                <div class="grid lg:grid-cols-3 gap-8">
+                                    <div class="lg:col-span-2">
+                                        <div class="flex items-center gap-4 mb-8">
+                                            <div
+                                                class="w-14 h-14 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-xl flex items-center justify-center">
+                                                <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <h3 class="text-2xl font-bold text-gray-900">Professional Services
+                                                    Solutions</h3>
+                                                <p class="text-gray-600 mt-1">Create a structured system for your clients, services, and finances
+Manage all your client and service data in one flexible workspace.</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="grid md:grid-cols-2 gap-6">
+                                            <div class="bg-cyan-50 rounded-xl p-6">
+                                                <div class="flex items-center gap-3 mb-3">
+                                                    <div
+                                                        class="w-10 h-10 bg-cyan-100 rounded-lg flex items-center justify-center">
+                                                        <svg class="w-5 h-5 text-cyan-600" fill="currentColor"
+                                                            viewBox="0 0 20 20">
+                                                            <path fill-rule="evenodd"
+                                                                d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                                                                clip-rule="evenodd" />
+                                                        </svg>
+                                                    </div>
+                                                    <h4 class="font-semibold text-gray-900">Client Sections</h4>
+                                                </div>
+                                                <p class="text-gray-600 text-sm">Store client profiles, contracts, contact details, and communication history in one place.</p>
+                                            </div>
+
+                                            <div class="bg-cyan-50 rounded-xl p-6">
+                                                <div class="flex items-center gap-3 mb-3">
+                                                    <div
+                                                        class="w-10 h-10 bg-cyan-100 rounded-lg flex items-center justify-center">
+                                                        <svg class="w-5 h-5 text-cyan-600" fill="currentColor"
+                                                            viewBox="0 0 20 20">
+                                                            <path fill-rule="evenodd"
+                                                                d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                                                                clip-rule="evenodd" />
+                                                        </svg>
+                                                    </div>
+                                                    <h4 class="font-semibold text-gray-900">Service & Time Records</h4>
+                                                </div>
+                                                <p class="text-gray-600 text-sm">Track billable work, hours, and service entries using custom fields and tables.</p>
+                                            </div>
+
+                                            <div class="bg-cyan-50 rounded-xl p-6">
+                                                <div class="flex items-center gap-3 mb-3">
+                                                    <div
+                                                        class="w-10 h-10 bg-cyan-100 rounded-lg flex items-center justify-center">
+                                                        <svg class="w-5 h-5 text-cyan-600" fill="currentColor"
+                                                            viewBox="0 0 20 20">
+                                                            <path
+                                                                d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z" />
+                                                            <path fill-rule="evenodd"
+                                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"
+                                                                clip-rule="evenodd" />
+                                                        </svg>
+                                                    </div>
+                                                    <h4 class="font-semibold text-gray-900">Invoices & Payments</h4>
+                                                </div>
+                                                <p class="text-gray-600 text-sm">Keep records of invoices, payment status, and outstanding balances.</p>
+                                            </div>
+
+                                            <div class="bg-cyan-50 rounded-xl p-6">
+                                                <div class="flex items-center gap-3 mb-3">
+                                                    <div
+                                                        class="w-10 h-10 bg-cyan-100 rounded-lg flex items-center justify-center">
+                                                        <svg class="w-5 h-5 text-cyan-600" fill="currentColor"
+                                                            viewBox="0 0 20 20">
+                                                            <path fill-rule="evenodd"
+                                                                d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z"
+                                                                clip-rule="evenodd" />
+                                                        </svg>
+                                                    </div>
+                                                    <h4 class="font-semibold text-gray-900">Service Delivery Tracking</h4>
+                                                </div>
+                                                <p class="text-gray-600 text-sm">Manage service agreements, deliverables, and progress for every client.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="lg:col-span-1">
+                                        <div
+                                            class="bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-2xl p-6 text-white h-full">
+                                            <h4 class="text-xl font-bold mb-4">Key Benefits</h4>
+                                            <ul class="space-y-4">
+                                                <li class="flex items-start gap-3">
+                                                    <svg class="w-5 h-5 text-cyan-200 flex-shrink-0 mt-0.5"
+                                                        fill="currentColor" viewBox="0 0 20 20">
+                                                        <path fill-rule="evenodd"
+                                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                    <span>One system for clients, services, and billing</span>
+                                                </li>
+                                                <li class="flex items-start gap-3">
+                                                    <svg class="w-5 h-5 text-cyan-200 flex-shrink-0 mt-0.5"
+                                                        fill="currentColor" viewBox="0 0 20 20">
+                                                        <path fill-rule="evenodd"
+                                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                    <span>Always know what’s due, delivered, and unpaid</span>
+                                                </li>
+                                                <li class="flex items-start gap-3">
+                                                    <svg class="w-5 h-5 text-cyan-200 flex-shrink-0 mt-0.5"
+                                                        fill="currentColor" viewBox="0 0 20 20">
+                                                        <path fill-rule="evenodd"
+                                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                    <span>Replace spreadsheets and scattered files</span>
+                                                </li>
+                                                <li class="flex items-start gap-3">
+                                                    <svg class="w-5 h-5 text-cyan-200 flex-shrink-0 mt-0.5"
+                                                        fill="currentColor" viewBox="0 0 20 20">
+                                                        <path fill-rule="evenodd"
+                                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                    <span>Centralize client information</span>
+                                                </li>
+                                                <li class="flex items-start gap-3">
+                                                    <svg class="w-5 h-5 text-cyan-200 flex-shrink-0 mt-0.5"
+                                                        fill="currentColor" viewBox="0 0 20 20">
+                                                        <path fill-rule="evenodd"
+                                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                    <span>Enhance service quality</span>
+                                                </li>
+                                            </ul>
+
+                                            <div class="mt-8 pt-6 border-t border-cyan-400">
+                                                <div class="text-sm text-cyan-200 mb-2">Typical Users</div>
+                                                <div class="flex flex-wrap gap-2">
+                                                    <span
+                                                        class="px-3 py-1 bg-cyan-400/30 rounded-full text-sm">Consultants</span>
+                                                    <span
+                                                        class="px-3 py-1 bg-cyan-400/30 rounded-full text-sm">Accountants</span>
+                                                    <span
+                                                        class="px-3 py-1 bg-cyan-400/30 rounded-full text-sm">Legal professionals</span>
+                                                        <span
+                                                        class="px-3 py-1 bg-cyan-400/30 rounded-full text-sm">Service firms</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <style>
-                    .industry-tab.active {
+                    .tab-btn.active[data-tab="retail"] {
                         background: linear-gradient(135deg, #4f46e5, #7c73e9);
                         color: white;
                         border-color: transparent;
+                        box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
                     }
 
-                    .industry-panel {
+                    .tab-btn.active[data-tab="agency"] {
+                        background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+                        color: white;
+                        border-color: transparent;
+                        box-shadow: 0 4px 12px rgba(139, 92, 246, 0.2);
+                    }
+
+                    .tab-btn.active[data-tab="startup"] {
+                        background: linear-gradient(135deg, #10b981, #059669);
+                        color: white;
+                        border-color: transparent;
+                        box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+                    }
+
+                    .tab-btn.active[data-tab="services"] {
+                        background: linear-gradient(135deg, #06b6d4, #0891b2);
+                        color: white;
+                        border-color: transparent;
+                        box-shadow: 0 4px 12px rgba(6, 182, 212, 0.2);
+                    }
+
+                    .tab-panel {
                         animation: fadeIn 0.3s ease-in-out;
                     }
 
@@ -861,38 +1153,47 @@
 
                 <script>
                     document.addEventListener('DOMContentLoaded', function () {
-                        const tabs = document.querySelectorAll('.industry-tab');
-                        const panels = document.querySelectorAll('.industry-panel');
+                        const tabs = document.querySelectorAll('.tab-btn');
+                        const panels = document.querySelectorAll('.tab-panel');
 
-                        tabs.forEach(tab => {
-                            tab.addEventListener('click', function () {
-                                const industry = this.dataset.industry;
+                        // Function to activate a tab
+                        function activateTab(tab) {
+                            const tabId = tab.dataset.tab;
 
-                                // Remove active class from all tabs
-                                tabs.forEach(t => t.classList.remove('active'));
-                                // Add active class to clicked tab
-                                this.classList.add('active');
+                            // Remove active class from all tabs
+                            tabs.forEach(t => t.classList.remove('active'));
+                            // Add active class to clicked tab
+                            tab.classList.add('active');
 
-                                // Hide all panels
-                                panels.forEach(panel => {
-                                    panel.classList.remove('active');
-                                    panel.classList.add('hidden');
-                                });
+                            // Hide all panels
+                            panels.forEach(panel => {
+                                panel.classList.remove('active');
+                                panel.classList.add('hidden');
+                            });
 
-                                // Show selected panel
-                                const targetPanel = document.querySelector(`.industry-panel[data-industry="${industry}"]`);
+                            // Show selected panel
+                            const targetPanel = document.querySelector(`.tab-panel[data-tab="${tabId}"]`);
+                            if (targetPanel) {
                                 targetPanel.classList.remove('hidden');
                                 targetPanel.classList.add('active');
+                            }
+                        }
+
+                        // Add click event to all tabs
+                        tabs.forEach(tab => {
+                            tab.addEventListener('click', function () {
+                                activateTab(this);
                             });
                         });
 
-                        // Set first tab as active by default
+                        // Activate first tab by default
                         if (tabs.length > 0) {
-                            tabs[0].click();
+                            activateTab(tabs[0]);
                         }
                     });
                 </script>
             </section>
+
 
             <!-- Full Control with Roles & Permissions Section -->
             <section class="mt-32 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -981,7 +1282,7 @@
                                 <h3 class="font-semibold text-gray-900">Role Management Dashboard</h3>
                             </div>
                             <div class="p-2">
-                                <img src="role.png" alt="Qwee Role Management Interface"
+                                <img src="role2.png" alt="Qwee Role Management Interface"
                                     class="w-full h-auto rounded-lg">
                             </div>
                             <div class="p-4 bg-gray-50 border-t border-gray-100">
@@ -999,7 +1300,7 @@
                     <div>
                         <div class="bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-200">
                             <div class="p-6 border-b border-gray-100 bg-gradient-to-r from-gray-50 to-white">
-                                <h3 class="font-semibold text-gray-900">Advanced Analytics Dashboard</h3>
+                                <h3 class="font-semibold text-gray-900">Advanced Data Filters</h3>
                             </div>
                             <div class="p-2">
                                 <img src="filter.png" alt="Qwee Analytics and Filters Interface"
@@ -1097,7 +1398,7 @@
 
                         <a href="https://app.qwee.online/signup"
                             class="inline-flex items-center gap-3 bg-white text-[#4f46e5] px-8 py-4 rounded-xl text-lg font-semibold hover:bg-gray-50 transition-all duration-300 shadow-lg hover:shadow-xl">
-                            <span>Start Your Free Trial</span>
+                            <span>Start Free with Qwee</span>
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -1115,13 +1416,13 @@
             <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
                 <div class="flex flex-col md:flex-row justify-between items-center gap-6">
                     <div class="flex items-center gap-3">
-                        <div
-                            class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#4f46e5] to-[#7c73e9] flex items-center justify-center">
+                        <div class="w-10 h-10 rounded-xl  bg-[#4f46e5]/10 p-1.5 flex items-center justify-center">
                             <img src="file.svg" alt="Qwee Logo" class="w-6 h-6 text-white" />
                         </div>
                         <div>
                             <span class="text-xl font-bold text-gray-900">Qwee</span>
-                            <p class="text-sm text-gray-500">Modern Data Management Platform</p>
+                            <p class="text-sm text-gray-500">A flexible workspace to create, organize, and manage your
+                                business data — without spreadsheets.</p>
                         </div>
                     </div>
                     <div class="text-center md:text-right">
