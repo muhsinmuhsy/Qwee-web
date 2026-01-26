@@ -20,7 +20,7 @@
     <meta property="og:title" content="Qwee - Flexible Data Management" />
     <meta property="og:description"
           content="Build flexible tables to manage your data your way. Replace spreadsheets and rigid CRMs with a simple, customizable platform. Free to log in." />
-    <meta property="og:image" content="https://qwee.online/og-image-v1.png" />
+    <meta property="og:image" content="https://qwee.online/og-image.png?v=1" />
     <meta property="og:url" content="https://qwee.online/" />
     <meta property="og:type" content="website" />
     
@@ -29,7 +29,7 @@
     <meta name="twitter:title" content="Qwee - Flexible Data Management" />
     <meta name="twitter:description"
           content="Flexible tables for your data. No Excel. Free to login." />
-    <meta name="twitter:image" content="https://qwee.online/og-image-v1.png" />
+    <meta name="twitter:image" content="https://qwee.online/og-image.png?v=1" />
     <meta name="twitter:site" content="@qwee_app" />
 
 
@@ -41,6 +41,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"></noscript>
+    <style>
+        @font-face {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 100 900;
+            font-display: swap;
+            src: url('https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2') format('woff2');
+        }
+    </style>
 
     <!-- Tailwind -->
     <link rel="preload" href="src/output.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -64,7 +73,7 @@
             <div class="container mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-8 py-2">
                 <div class="flex items-center gap-3">
                     <div class="p-1.5 flex items-center justify-center">
-                        <img src="1.webp" alt="Qwee Logo" class="w-30" width="120" height="44" />
+                        <img src="1.webp" alt="Qwee Logo" class="w-[120px] h-[44px]" width="120" height="44" style="aspect-ratio: 120/44;" />
                     </div>
                    
                 </div>
@@ -163,7 +172,9 @@
                                     <img src="dashboard.webp"
                                         alt="Qwee Dashboard Interface showing data management features"
                                         class="w-full h-auto rounded-lg border border-gray-100"
-                                        width="1901" height="1029" />
+                                        width="1901" height="1029" 
+                                        style="aspect-ratio: 1901/1029;" 
+                                        loading="eager" />
                                 </div>
                                 <div class="bg-gradient-to-r from-gray-50 to-white p-4 border-t border-gray-100">
                                     <p class="text-sm text-gray-600 text-center font-medium">
@@ -1213,40 +1224,57 @@
                         document.addEventListener('DOMContentLoaded', function () {
                             const tabs = document.querySelectorAll('.tab-btn');
                             const panels = document.querySelectorAll('.tab-panel');
-
-                            // Function to activate a tab
-                            function activateTab(tab) {
-                                const tabId = tab.dataset.tab;
-
-                                // Remove active class from all tabs
-                                tabs.forEach(t => t.classList.remove('active'));
-                                // Add active class to clicked tab
-                                tab.classList.add('active');
-
-                                // Hide all panels
-                                panels.forEach(panel => {
-                                    panel.classList.remove('active');
-                                    panel.classList.add('hidden');
-                                });
-
-                                // Show selected panel
-                                const targetPanel = document.querySelector(`.tab-panel[data-tab="${tabId}"]`);
-                                if (targetPanel) {
-                                    targetPanel.classList.remove('hidden');
-                                    targetPanel.classList.add('active');
-                                }
-                            }
-
-                            // Add click event to all tabs
+                            
+                            // Cache DOM queries to avoid repeated lookups
+                            const tabDataMap = new Map();
                             tabs.forEach(tab => {
-                                tab.addEventListener('click', function () {
-                                    activateTab(this);
-                                });
+                                const tabId = tab.dataset.tab;
+                                const targetPanel = document.querySelector(`.tab-panel[data-tab="${tabId}"]`);
+                                tabDataMap.set(tab, { tabId, targetPanel });
                             });
 
-                            // Activate first tab by default
+                            // Function to activate a tab - optimized to prevent forced reflows
+                            function activateTab(tab) {
+                                const { tabId, targetPanel } = tabDataMap.get(tab);
+                                
+                                // Batch DOM reads first
+                                const currentActiveTab = document.querySelector('.tab-btn.active');
+                                const currentActivePanel = document.querySelector('.tab-panel.active');
+                                
+                                // Batch DOM writes using requestAnimationFrame
+                                requestAnimationFrame(() => {
+                                    // Remove active classes
+                                    if (currentActiveTab) {
+                                        currentActiveTab.classList.remove('active');
+                                    }
+                                    if (currentActivePanel) {
+                                        currentActivePanel.classList.remove('active');
+                                        currentActivePanel.classList.add('hidden');
+                                    }
+                                    
+                                    // Add active classes to new tab and panel
+                                    tab.classList.add('active');
+                                    if (targetPanel) {
+                                        targetPanel.classList.remove('hidden');
+                                        targetPanel.classList.add('active');
+                                    }
+                                });
+                            }
+
+                            // Add click event to all tabs - use event delegation
+                            const tabsContainer = document.querySelector('.flex.flex-wrap.justify-center');
+                            if (tabsContainer) {
+                                tabsContainer.addEventListener('click', function (e) {
+                                    const tabBtn = e.target.closest('.tab-btn');
+                                    if (tabBtn && tabDataMap.has(tabBtn)) {
+                                        activateTab(tabBtn);
+                                    }
+                                });
+                            }
+
+                            // Activate first tab by default - defer to prevent blocking
                             if (tabs.length > 0) {
-                                activateTab(tabs[0]);
+                                requestAnimationFrame(() => activateTab(tabs[0]));
                             }
                         });
                     </script>
@@ -1341,7 +1369,9 @@
                             </div>
                             <div class="p-2">
                                 <img src="role2.webp" alt="Qwee Role Management Interface"
-                                    width="1920" height="1027" class="w-full h-auto rounded-lg">
+                                    width="1920" height="1027" class="w-full h-auto rounded-lg" 
+                                    style="aspect-ratio: 1920/1027;" 
+                                    loading="lazy">
                             </div>
                             <div class="p-4 bg-gray-50 border-t border-gray-100">
                                 <p class="text-sm text-gray-600 text-center">Visual role configuration with real-time
@@ -1362,7 +1392,9 @@
                             </div>
                             <div class="p-2">
                                 <img src="filter.webp" alt="Qwee Analytics and Filters Interface"
-                                    width="1899" height="1029" class="w-full h-auto rounded-lg">
+                                    width="1899" height="1029" class="w-full h-auto rounded-lg" 
+                                    style="aspect-ratio: 1899/1029;" 
+                                    loading="lazy">
                             </div>
                             <div class="p-4 bg-gray-50 border-t border-gray-100">
                                 <p class="text-sm text-gray-600 text-center">Interactive filtering with live data
@@ -1475,7 +1507,7 @@
                 <div class="flex flex-col md:flex-row justify-between items-center gap-6">
                     <div class="flex items-center gap-3">
                         <div class=" p-1.5 flex items-center justify-center">
-                            <img src="3.png" alt="Qwee Logo" width="306" height="355" class="w-10" />
+                            <img src="3.png" alt="Qwee Logo" width="306" height="355" class="w-10" style="aspect-ratio: 306/355;" />
                         </div>
                         <div>
                             <span class="text-xl font-bold text-gray-900">Qwee</span>

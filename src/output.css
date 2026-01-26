@@ -391,6 +391,9 @@
   .h-20 {
     height: calc(var(--spacing) * 20);
   }
+  .h-\[44px\] {
+    height: 44px;
+  }
   .h-auto {
     height: auto;
   }
@@ -423,6 +426,9 @@
   }
   .w-30 {
     width: calc(var(--spacing) * 30);
+  }
+  .w-\[120px\] {
+    width: 120px;
   }
   .w-full {
     width: 100%;
