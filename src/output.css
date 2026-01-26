@@ -424,9 +424,6 @@
   .w-20 {
     width: calc(var(--spacing) * 20);
   }
-  .w-30 {
-    width: calc(var(--spacing) * 30);
-  }
   .w-\[120px\] {
     width: 120px;
   }
@@ -1359,6 +1356,17 @@
       font-size: var(--text-6xl);
       line-height: var(--tw-leading, var(--text-6xl--line-height));
     }
+  }
+}
+@layer base {
+  html {
+    font-size: 16px;
+  }
+  body {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
   }
 }
 @property --tw-rotate-x {
