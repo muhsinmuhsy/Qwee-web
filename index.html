@@ -1,11 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Qwee — Email Campaign Automation</title>
+  <meta name="description" content="Qwee is a professional email campaign automation platform. Schedule campaigns, manage contacts, design templates, and track delivery — all in one place.">
+  <meta name="keywords" content="email automation, mail campaign, email marketing, contact management, scheduled sending, Gmail integration">
+  <meta name="author" content="Qwee">
+  <meta property="og:title" content="Qwee — Email Campaign Automation">
+  <meta property="og:description" content="Schedule campaigns, manage contacts, design templates, and track delivery — all in one place.">
+  <meta property="og:url" content="https://qwee.online">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://qwee.online">
+  <link rel="icon" href="logo-icon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/output.css">
 </head>
-<body>
-    
+<body class="bg-base text-content antialiased">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 border-b border-edge/50 bg-base/80 backdrop-blur-md">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 sm:py-4">
+      <a href="/" class="flex items-center">
+        <img src="logo.png" alt="Qwee" class="h-8 w-auto">
+      </a>
+      <div class="hidden items-center gap-8 md:flex">
+        <a href="#features" class="text-sm font-medium text-muted transition-smooth hover:text-content">Features</a>
+        <a href="#how-it-works" class="text-sm font-medium text-muted transition-smooth hover:text-content">How it works</a>
+        <a href="privacy.html" class="text-sm font-medium text-muted transition-smooth hover:text-content">Privacy</a>
+        <a href="terms.html" class="text-sm font-medium text-muted transition-smooth hover:text-content">Terms</a>
+      </div>
+      <a href="https://app.qwee.online" class="rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-white transition-smooth hover:bg-primary-dark sm:px-5 sm:py-2.5">Sign in</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden bg-grid pt-28 pb-16 sm:pt-32 sm:pb-20">
+    <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-base"></div>
+    <div class="relative mx-auto max-w-7xl px-4 sm:px-6 text-center">
+      <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5">
+        <span class="h-2 w-2 rounded-full bg-primary"></span>
+        <span class="text-xs font-medium text-primary sm:text-sm">Gmail API Integration Ready</span>
+      </div>
+      <h1 class="mx-auto max-w-4xl text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl md:text-6xl">
+        Email campaigns that <span class="text-gradient">actually get sent</span>
+      </h1>
+      <p class="mx-auto mt-6 max-w-2xl text-base text-muted sm:text-lg">
+        Schedule campaigns, manage contacts, design templates, and track delivery — all from one professional platform. Connect your Gmail account and start sending in minutes.
+      </p>
+      <div class="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row sm:mt-10">
+        <a href="https://app.qwee.online" class="w-full rounded-xl bg-primary px-8 py-4 text-base font-semibold text-white shadow-lg shadow-primary/25 transition-smooth hover:bg-primary-dark hover:shadow-primary/40 sm:w-auto">
+          Get started free
+        </a>
+        <a href="#how-it-works" class="w-full rounded-xl border border-edge px-8 py-4 text-base font-semibold text-content transition-smooth hover:border-primary/50 hover:bg-surface sm:w-auto">
+          See how it works
+        </a>
+      </div>
+      <p class="mt-6 text-sm text-muted">No credit card required · Connect Gmail in seconds</p>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="py-16 sm:py-24">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6">
+      <div class="mb-12 text-center sm:mb-16">
+        <h2 class="text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl">Everything you need to run email campaigns</h2>
+        <p class="mt-4 text-base text-muted sm:text-lg">Professional tools for contact management, template design, and delivery tracking.</p>
+      </div>
+      <div class="grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <!-- Feature 1 -->
+        <div class="card-glow rounded-2xl border border-edge bg-card p-6 sm:p-8">
+          <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
+            <svg class="h-6 w-6 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 11l18-5v12L3 14v-3z"/>
+              <path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold sm:text-xl">Campaign scheduling</h3>
+          <p class="mt-2 text-sm text-muted sm:text-base">Set send times, daily limits, and intervals. Qwee handles queueing, retries, and delivery automatically.</p>
+        </div>
+        <!-- Feature 2 -->
+        <div class="card-glow rounded-2xl border border-edge bg-card p-6 sm:p-8">
+          <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
+            <svg class="h-6 w-6 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold sm:text-xl">Contact management</h3>
+          <p class="mt-2 text-sm text-muted sm:text-base">Organize contacts into lists, add custom fields, import via CSV, and prevent duplicate sends with automatic deduplication.</p>
+        </div>
+        <!-- Feature 3 -->
+        <div class="card-glow rounded-2xl border border-edge bg-card p-6 sm:p-8">
+          <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
+            <svg class="h-6 w-6 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" x2="8" y1="13" y2="13"/>
+              <line x1="16" x2="8" y1="17" y2="17"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold sm:text-xl">Template builder</h3>
+          <p class="mt-2 text-sm text-muted sm:text-base">Design professional email templates with a visual editor. Use merge tags to personalize each message automatically.</p>
+        </div>
+        <!-- Feature 4 -->
+        <div class="card-glow rounded-2xl border border-edge bg-card p-6 sm:p-8">
+          <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
+            <svg class="h-6 w-6 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold sm:text-xl">Delivery tracking</h3>
+          <p class="mt-2 text-sm text-muted sm:text-base">Monitor every email in real-time. Track sent, failed, queued, and retry statuses with detailed error reporting.</p>
+        </div>
+        <!-- Feature 5 -->
+        <div class="card-glow rounded-2xl border border-edge bg-card p-6 sm:p-8">
+          <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
+            <svg class="h-6 w-6 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold sm:text-xl">Secure Gmail integration</h3>
+          <p class="mt-2 text-sm text-muted sm:text-base">Connect via Google OAuth with secure token refresh. Your credentials are encrypted and never stored in plaintext.</p>
+        </div>
+        <!-- Feature 6 -->
+        <div class="card-glow rounded-2xl border border-edge bg-card p-6 sm:p-8">
+          <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
+            <svg class="h-6 w-6 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+              <path d="M2 17l10 5 10-5"/>
+              <path d="M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold sm:text-xl">Follow-up campaigns</h3>
+          <p class="mt-2 text-sm text-muted sm:text-base">Automatically identify recipients who haven't responded and send targeted follow-up emails without manual effort.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="how-it-works" class="border-y border-edge/50 bg-surface/50 py-16 sm:py-24">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6">
+      <div class="mb-12 text-center sm:mb-16">
+        <h2 class="text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl">How it works</h2>
+        <p class="mt-4 text-base text-muted sm:text-lg">Three steps from sign-up to sent.</p>
+      </div>
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-12">
+        <div class="text-center">
+          <div class="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary text-xl font-bold text-white sm:h-16 sm:w-16 sm:text-2xl">1</div>
+          <h3 class="text-lg font-semibold sm:text-xl">Connect your Gmail</h3>
+          <p class="mt-2 text-sm text-muted sm:text-base">Sign in with Google and securely connect your Gmail account via OAuth. No app passwords needed.</p>
+        </div>
+        <div class="text-center">
+          <div class="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary text-xl font-bold text-white sm:h-16 sm:w-16 sm:text-2xl">2</div>
+          <h3 class="text-lg font-semibold sm:text-xl">Create your campaign</h3>
+          <p class="mt-2 text-sm text-muted sm:text-base">Import contacts, choose a template, set your schedule and daily limits. Qwee handles the rest.</p>
+        </div>
+        <div class="text-center">
+          <div class="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary text-xl font-bold text-white sm:h-16 sm:w-16 sm:text-2xl">3</div>
+          <h3 class="text-lg font-semibold sm:text-xl">Track delivery</h3>
+          <p class="mt-2 text-sm text-muted sm:text-base">Watch emails go out in real-time. Retry failed sends, monitor delivery rates, and follow up automatically.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 sm:py-24">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6">
+      <div class="card-glow rounded-3xl border border-primary/20 bg-gradient-to-br from-primary/10 to-card p-8 text-center sm:p-12">
+        <h2 class="text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl">Ready to start sending?</h2>
+        <p class="mx-auto mt-4 max-w-xl text-base text-muted sm:text-lg">Connect your Gmail account and launch your first campaign in under five minutes.</p>
+        <a href="https://app.qwee.online" class="mt-8 inline-block rounded-xl bg-primary px-8 py-4 text-base font-semibold text-white shadow-lg shadow-primary/25 transition-smooth hover:bg-primary-dark hover:shadow-primary/40">
+          Launch Qwee
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-edge/50 py-12">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6">
+      <div class="flex flex-col items-center justify-between gap-8 md:flex-row">
+        <div class="flex items-center">
+          <img src="logo.png" alt="Qwee" class="h-7 w-auto">
+        </div>
+        <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-8">
+          <a href="privacy.html" class="text-sm text-muted transition-smooth hover:text-content">Privacy Policy</a>
+          <a href="terms.html" class="text-sm text-muted transition-smooth hover:text-content">Terms of Service</a>
+          <a href="https://app.qwee.online" class="text-sm text-muted transition-smooth hover:text-content">Sign in</a>
+        </div>
+      </div>
+      <div class="mt-8 border-t border-edge/30 pt-8 text-center">
+        <p class="text-sm text-muted">&copy; 2026 Qwee. All rights reserved.</p>
+        <p class="mt-2 text-sm text-muted">Support: <a href="mailto:muhsinkoodali856@gmail.com" class="text-primary transition-smooth hover:text-primary-dark">muhsinkoodali856@gmail.com</a></p>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>

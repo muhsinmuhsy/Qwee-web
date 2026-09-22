@@ -3,9 +3,141 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Privacy Policy — Qwee</title>
+  <meta name="description" content="Privacy Policy for Qwee email campaign automation platform. Learn how we collect, use, and protect your data.">
+  <link rel="canonical" href="https://qwee.online/privacy.html">
+  <link rel="icon" href="logo-icon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/output.css">
 </head>
-<body>
-  
+<body class="bg-base text-content antialiased">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 border-b border-edge/50 bg-base/80 backdrop-blur-md">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 sm:py-4">
+      <a href="/" class="flex items-center">
+        <img src="logo.png" alt="Qwee" class="h-8 w-auto">
+      </a>
+      <div class="hidden items-center gap-8 md:flex">
+        <a href="/#features" class="text-sm font-medium text-muted transition-smooth hover:text-content">Features</a>
+        <a href="/#how-it-works" class="text-sm font-medium text-muted transition-smooth hover:text-content">How it works</a>
+        <a href="privacy.html" class="text-sm font-medium text-content">Privacy</a>
+        <a href="terms.html" class="text-sm font-medium text-muted transition-smooth hover:text-content">Terms</a>
+      </div>
+      <a href="https://app.qwee.online" class="rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-white transition-smooth hover:bg-primary-dark sm:px-5 sm:py-2.5">Sign in</a>
+    </div>
+  </nav>
+
+  <!-- Content -->
+  <section class="pt-28 pb-16 sm:pt-32 sm:pb-20">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6">
+      <h1 class="text-3xl font-bold tracking-tight sm:text-4xl">Privacy Policy</h1>
+      <p class="mt-4 text-muted">Last updated: September 22, 2026</p>
+
+      <div class="mt-10 space-y-8 sm:mt-12 sm:space-y-10">
+        <div>
+          <h2 class="text-lg font-semibold sm:text-xl">1. Introduction</h2>
+          <p class="mt-3 text-muted leading-relaxed">Qwee ("we", "our", or "us") is an email campaign automation platform that allows users to schedule, send, and track email campaigns through their Gmail accounts. This Privacy Policy explains how we collect, use, and protect your information when you use our service at <a href="https://app.qwee.online" class="text-primary hover:text-primary-dark">app.qwee.online</a>.</p>
+        </div>
+
+        <div>
+          <h2 class="text-lg font-semibold sm:text-xl">2. Information We Collect</h2>
+          <h3 class="mt-4 font-medium text-content">2.1 Account Information</h3>
+          <p class="mt-2 text-muted leading-relaxed">When you sign in with Google, we receive your Google account email address and a profile image. We do not request access to your Google contacts, Google Drive, or other Google services beyond Gmail sending permissions.</p>
+          <h3 class="mt-4 font-medium text-content">2.2 Campaign Data</h3>
+          <p class="mt-2 text-muted leading-relaxed">We store the contact lists, email templates, campaign schedules, and delivery statuses you create. This data is stored in our secure database and is only accessible to you and your authorized team members.</p>
+          <h3 class="mt-4 font-medium text-content">2.3 Gmail OAuth Tokens</h3>
+          <p class="mt-2 text-muted leading-relaxed">When you connect your Gmail account, we store encrypted OAuth access and refresh tokens. These tokens are used solely to send emails on your behalf. We never store your Gmail password.</p>
+          <h3 class="mt-4 font-medium text-content">2.4 Usage Data</h3>
+          <p class="mt-2 text-muted leading-relaxed">We collect operational data including email sending volumes, delivery rates, and error logs to provide and improve our service.</p>
+        </div>
+
+        <div>
+          <h2 class="text-lg font-semibold sm:text-xl">3. How We Use Your Information</h2>
+          <ul class="mt-3 space-y-2 text-muted leading-relaxed">
+            <li>To send email campaigns on your behalf through your connected Gmail account</li>
+            <li>To display campaign analytics and delivery tracking</li>
+            <li>To prevent duplicate emails and manage sending rate limits</li>
+            <li>To provide customer support and respond to your inquiries</li>
+            <li>To maintain and improve the platform's functionality and performance</li>
+            <li>To ensure compliance with email sending best practices and policies</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="text-lg font-semibold sm:text-xl">4. Data Storage and Security</h2>
+          <p class="mt-3 text-muted leading-relaxed">Your data is stored in a PostgreSQL database hosted on Neon's cloud infrastructure in the United States. Gmail OAuth tokens are encrypted using AES-256 encryption before storage. All data transmission occurs over HTTPS with TLS encryption. Access to the database is restricted and authenticated.</p>
+        </div>
+
+        <div>
+          <h2 class="text-lg font-semibold sm:text-xl">5. Gmail API Data Access</h2>
+          <p class="mt-3 text-muted leading-relaxed">Qwee requests the following Gmail API scope: <code class="rounded bg-surface px-2 py-1 text-sm text-primary">gmail.send</code>. This scope allows Qwee to send emails on your behalf only. Qwee does not read, modify, or access your existing Gmail messages, labels, or mailbox content.</p>
+        </div>
+
+        <div>
+          <h2 class="text-lg font-semibold sm:text-xl">6. Data Sharing</h2>
+          <p class="mt-3 text-muted leading-relaxed">We do not sell, rent, or share your data with third parties. Your campaign data and contact lists are private to your account. We share data only with our infrastructure providers (Neon for database hosting, Backblaze B2 for file storage, Cloudflare for email queue processing) who are bound by confidentiality obligations and process data solely to provide the services we use.</p>
+        </div>
+
+        <div>
+          <h2 class="text-lg font-semibold sm:text-xl">7. Data Retention</h2>
+          <p class="mt-3 text-muted leading-relaxed">We retain your data for as long as your account is active. If you delete your account, we permanently remove your data within 30 days, with the exception of data required for legal compliance or fraud prevention.</p>
+        </div>
+
+        <div>
+          <h2 class="text-lg font-semibold sm:text-xl">8. Your Rights</h2>
+          <ul class="mt-3 space-y-2 text-muted leading-relaxed">
+            <li><strong class="text-content">Access:</strong> You can view all your data through the Qwee dashboard.</li>
+            <li><strong class="text-content">Deletion:</strong> You can delete contacts, campaigns, templates, and your entire account at any time.</li>
+            <li><strong class="text-content">Revocation:</strong> You can disconnect your Gmail account at any time, which immediately revokes our access.</li>
+            <li><strong class="text-content">Export:</strong> You can export your contact lists via CSV at any time.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="text-lg font-semibold sm:text-xl">9. Cookies</h2>
+          <p class="mt-3 text-muted leading-relaxed">Qwee uses essential cookies to maintain your authentication session. We do not use tracking cookies, advertising cookies, or third-party analytics cookies.</p>
+        </div>
+
+        <div>
+          <h2 class="text-lg font-semibold sm:text-xl">10. Children's Privacy</h2>
+          <p class="mt-3 text-muted leading-relaxed">Qwee is not intended for use by individuals under the age of 16. We do not knowingly collect data from children. If you believe a child has provided us with personal data, please contact us and we will promptly delete it.</p>
+        </div>
+
+        <div>
+          <h2 class="text-lg font-semibold sm:text-xl">11. Changes to This Policy</h2>
+          <p class="mt-3 text-muted leading-relaxed">We may update this Privacy Policy from time to time. We will notify you of significant changes by posting the updated policy on this page and updating the "Last updated" date.</p>
+        </div>
+
+        <div>
+          <h2 class="text-lg font-semibold sm:text-xl">12. Contact Us</h2>
+          <p class="mt-3 text-muted leading-relaxed">If you have questions about this Privacy Policy, please contact us at <a href="mailto:muhsinkoodali856@gmail.com" class="text-primary hover:text-primary-dark">muhsinkoodali856@gmail.com</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-edge/50 py-12">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6">
+      <div class="flex flex-col items-center justify-between gap-8 md:flex-row">
+        <div class="flex items-center">
+          <img src="logo.png" alt="Qwee" class="h-7 w-auto">
+        </div>
+        <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-8">
+          <a href="privacy.html" class="text-sm text-muted transition-smooth hover:text-content">Privacy Policy</a>
+          <a href="terms.html" class="text-sm text-muted transition-smooth hover:text-content">Terms of Service</a>
+          <a href="https://app.qwee.online" class="text-sm text-muted transition-smooth hover:text-content">Sign in</a>
+        </div>
+      </div>
+      <div class="mt-8 border-t border-edge/30 pt-8 text-center">
+        <p class="text-sm text-muted">&copy; 2026 Qwee. All rights reserved.</p>
+        <p class="mt-2 text-sm text-muted">Support: <a href="mailto:muhsinkoodali856@gmail.com" class="text-primary transition-smooth hover:text-primary-dark">muhsinkoodali856@gmail.com</a></p>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>
