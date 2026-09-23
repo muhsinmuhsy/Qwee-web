@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+:root {
+  --bg-base: #FAFAF7;
+  --bg-card: #FFFFFF;
+  --bg-surface: #F4F4EF;
+  --bg-elevated: #ECECE6;
+  --border-base: #E4E4DD;
+  --border-strong: #D4D4CC;
+  --text-primary: #1A1A17;
+  --text-secondary: #6B6B63;
+  --text-tertiary: #9A9A90;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-base: #0E0E0C;
+    --bg-card: #161613;
+    --bg-surface: #131311;
+    --bg-elevated: #242421;
+    --border-base: #2A2A26;
+    --border-strong: #3A3A35;
+    --text-primary: #F5F5F0;
+    --text-secondary: #A2A298;
+    --text-tertiary: #6E6E66;
+  }
+}
+
+@theme inline {
+  --color-primary: #FF6B00;
+  --color-primary-dark: #E85D00;
+  --color-primary-light: #FFF3E8;
+  --color-base: var(--bg-base);
+  --color-card: var(--bg-card);
+  --color-surface: var(--bg-surface);
+  --color-elevated: var(--bg-elevated);
+  --color-edge: var(--border-base);
+  --color-edge-strong: var(--border-strong);
+  --color-content: var(--text-primary);
+  --color-muted: var(--text-secondary);
+  --color-faint: var(--text-tertiary);
+
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Fraunces", "Iowan Old Style", "Apple Garamond", Georgia, serif;
+}
+
+@layer base {
+  html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    font-family: var(--font-sans);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    background-color: var(--bg-base);
+    color: var(--text-primary);
+    font-feature-settings: "ss01", "cv01";
+  }
+  ::selection {
+    background-color: rgba(255, 107, 0, 0.18);
+    color: var(--text-primary);
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+    font-optical-sizing: auto;
+  }
+  .transition-smooth {
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+  .accent-rule {
+    background-image: linear-gradient(to right, var(--color-primary), var(--color-primary));
+    background-size: 100% 2px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+  }
+  .animate-travel { animation: qwee-travel 2.6s cubic-bezier(0.4, 0, 0.2, 1) infinite; }
+  .animate-breathe { animation: qwee-breathe 2.2s ease-in-out infinite; }
+  .panel-shadow { box-shadow: 0 1px 2px rgba(0,0,0,0.04), 0 20px 44px -20px rgba(0,0,0,0.18); }
+}
+
+@keyframes qwee-travel {
+  0% { left: 0%; opacity: 0; }
+  12% { opacity: 1; }
+  88% { opacity: 1; }
+  100% { left: calc(100% - 7px); opacity: 0; }
+}
+@keyframes qwee-breathe {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+  .transition-smooth { transition: none !important; }
+  .animate-travel, .animate-breathe { animation: none !important; }
+}
