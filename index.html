@@ -3,207 +3,340 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Qwee — Email Campaign Automation</title>
-  <meta name="description" content="Qwee is a professional email campaign automation platform. Schedule campaigns, manage contacts, design templates, and track delivery — all in one place.">
-  <meta name="keywords" content="email automation, mail campaign, email marketing, contact management, scheduled sending, Gmail integration">
+  <title>Qwee — Send email campaigns from your own Gmail</title>
+  <meta name="description" content="Qwee sends email campaigns through your own Gmail account over OAuth. No SMTP, no app passwords, no shared sending domain. Schedule, personalize, and track every send.">
+  <meta name="keywords" content="email automation, Gmail campaigns, mail campaign, email marketing, contact management, scheduled sending, Gmail integration, no SMTP">
   <meta name="author" content="Qwee">
-  <meta property="og:title" content="Qwee — Email Campaign Automation">
-  <meta property="og:description" content="Schedule campaigns, manage contacts, design templates, and track delivery — all in one place.">
+  <meta property="og:title" content="Qwee — Send email campaigns from your own Gmail">
+  <meta property="og:description" content="No SMTP, no app passwords, no shared sending domain. Schedule, personalize, and track every send from your Gmail account.">
   <meta property="og:url" content="https://qwee.online">
   <meta property="og:type" content="website">
+  <meta name="theme-color" content="#FAFAF7" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0E0E0C" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://qwee.online">
   <link rel="icon" href="logo-icon.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="src/output.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Qwee",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "description": "Email campaign automation that sends through your own Gmail account over OAuth. No SMTP, no app passwords, no shared sending domain.",
+    "url": "https://qwee.online",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Does Qwee read my Gmail messages?", "acceptedAnswer": { "@type": "Answer", "text": "No. Qwee requests only the gmail.send scope, which lets it send emails on your behalf. It does not read, modify, or access your existing messages, labels, or mailbox content." } },
+      { "@type": "Question", "name": "Do I need an SMTP server or app passwords?", "acceptedAnswer": { "@type": "Answer", "text": "No. You connect your Gmail account with Google OAuth in seconds. No SMTP setup and no app passwords required." } },
+      { "@type": "Question", "name": "How are my Gmail credentials stored?", "acceptedAnswer": { "@type": "Answer", "text": "OAuth access and refresh tokens are encrypted with AES-256 before storage. Your Gmail password is never stored." } }
+    ]
+  }
+  </script>
 </head>
 <body class="bg-base text-content antialiased">
 
   <!-- Navigation -->
-  <nav class="fixed top-0 left-0 right-0 z-50 border-b border-edge/50 bg-base/80 backdrop-blur-md">
-    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 sm:py-4">
-      <a href="/" class="flex items-center">
-        <img src="logo.png" alt="Qwee" class="h-8 w-auto">
+  <nav class="fixed top-0 left-0 right-0 z-50 border-b border-edge/60 bg-base/85 backdrop-blur-md">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+      <a href="/" class="flex items-center" aria-label="Qwee home">
+        <img src="logo.png" alt="Qwee" class="h-7 w-auto">
       </a>
-      <div class="hidden items-center gap-8 md:flex">
+      <div class="hidden items-center gap-9 md:flex">
         <a href="#features" class="text-sm font-medium text-muted transition-smooth hover:text-content">Features</a>
         <a href="#how-it-works" class="text-sm font-medium text-muted transition-smooth hover:text-content">How it works</a>
         <a href="privacy.html" class="text-sm font-medium text-muted transition-smooth hover:text-content">Privacy</a>
         <a href="terms.html" class="text-sm font-medium text-muted transition-smooth hover:text-content">Terms</a>
       </div>
-      <a href="https://app.qwee.online" class="rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-white transition-smooth hover:bg-primary-dark sm:px-5 sm:py-2.5">Sign in</a>
+      <a href="https://app.qwee.online" class="text-sm font-semibold text-content transition-smooth hover:text-primary">Sign in</a>
     </div>
   </nav>
 
   <!-- Hero -->
-  <section class="relative overflow-hidden bg-grid pt-28 pb-16 sm:pt-32 sm:pb-20">
-    <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-base"></div>
-    <div class="relative mx-auto max-w-7xl px-4 sm:px-6 text-center">
-      <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5">
-        <span class="h-2 w-2 rounded-full bg-primary"></span>
-        <span class="text-xs font-medium text-primary sm:text-sm">Gmail API Integration Ready</span>
+  <header class="relative overflow-hidden pt-36 pb-20 sm:pt-44 sm:pb-28">
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
+        <!-- Headline column -->
+        <div class="lg:col-span-7">
+          <div class="reveal mb-7 inline-flex items-center gap-2.5 text-xs font-medium uppercase tracking-[0.18em] text-faint">
+            <span class="h-1.5 w-1.5 rounded-full bg-primary"></span>
+            Gmail-native email automation
+          </div>
+          <h1 class="reveal font-display text-[2.75rem] font-medium leading-[1.05] tracking-[-0.02em] sm:text-6xl lg:text-[4.25rem]">
+            Send email campaigns from <em class="font-display italic font-normal text-primary">your own</em> Gmail.
+          </h1>
+          <p class="reveal mt-7 max-w-xl text-lg leading-relaxed text-muted">
+            Qwee sends through your Gmail account over OAuth — no SMTP, no app passwords, no shared sending domain. Schedule, personalize, and track every send.
+          </p>
+          <div class="reveal mt-10 flex flex-col items-start gap-5 sm:flex-row sm:items-center">
+            <a href="https://app.qwee.online" class="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-white transition-smooth hover:bg-primary-dark">
+              Get started free
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="#how-it-works" class="inline-flex items-center gap-1.5 text-sm font-semibold text-content transition-smooth hover:text-primary">
+              See how it works
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </a>
+          </div>
+          <p class="reveal mt-6 text-sm text-faint">No credit card required · Connect Gmail in seconds</p>
+        </div>
+
+        <!-- Product UI + architecture panel -->
+        <aside class="reveal lg:col-span-5 lg:pt-2">
+          <div class="relative rounded-2xl border border-edge bg-card p-5 shadow-[0_1px_2px_rgba(0,0,0,0.04),0_20px_44px_-20px_rgba(0,0,0,0.18)] sm:p-6">
+            <!-- Window header -->
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="h-2 w-2 rounded-full bg-primary"></span>
+                <span class="text-xs font-semibold text-content">Qwee</span>
+                <span class="text-xs text-faint">/ Campaign</span>
+              </div>
+              <span class="inline-flex items-center gap-1.5 text-xs font-medium text-muted">
+                <span class="h-1.5 w-1.5 rounded-full bg-primary animate-breathe"></span>
+                Sending
+              </span>
+            </div>
+
+            <!-- Campaign -->
+            <div class="mt-5">
+              <p class="font-display text-base font-medium tracking-[-0.01em]">Q3 founder outreach</p>
+              <p class="mt-1 text-xs text-faint">248 recipients · from your Gmail</p>
+            </div>
+
+            <!-- Send queue -->
+            <ul class="mt-5 space-y-2.5" aria-label="Delivery statuses">
+              <li class="flex items-center justify-between gap-3 rounded-xl border border-edge bg-base/60 px-3.5 py-3">
+                <span class="flex min-w-0 items-center gap-2.5">
+                  <svg class="h-4 w-4 shrink-0 text-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+                  <span class="truncate text-sm text-content">elena@studio.co</span>
+                </span>
+                <span class="shrink-0 text-xs font-medium text-muted">Sent</span>
+              </li>
+              <li class="flex items-center justify-between gap-3 rounded-xl border border-edge-strong bg-base/60 px-3.5 py-3">
+                <span class="flex min-w-0 items-center gap-2.5">
+                  <svg class="h-4 w-4 shrink-0 animate-breathe text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                  <span class="truncate text-sm text-content">marcus@northwind.io</span>
+                </span>
+                <span class="shrink-0 text-xs font-semibold text-content">Queued</span>
+              </li>
+              <li class="flex items-center justify-between gap-3 rounded-xl border border-edge bg-base/60 px-3.5 py-3">
+                <span class="flex min-w-0 items-center gap-2.5">
+                  <svg class="h-4 w-4 shrink-0 text-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg>
+                  <span class="truncate text-sm text-content">priya@helix.dev</span>
+                </span>
+                <span class="shrink-0 text-xs font-medium text-muted">Retry</span>
+              </li>
+            </ul>
+
+            <!-- Architecture connector → Gmail -->
+            <div class="mt-6 flex items-center gap-3">
+              <span class="text-xs text-faint">via</span>
+              <span class="relative block h-px flex-1 bg-edge">
+                <span class="animate-travel absolute top-1/2 h-1.5 w-1.5 -translate-y-1/2 rounded-full bg-primary"></span>
+              </span>
+              <span class="inline-flex items-center gap-1.5 rounded-md border border-edge px-2 py-1 text-xs font-medium text-content">
+                <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+                Gmail
+              </span>
+            </div>
+            <p class="mt-3 text-center text-[11px] text-faint">gmail.send scope only · never reads your mailbox</p>
+          </div>
+        </aside>
       </div>
-      <h1 class="mx-auto max-w-4xl text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl md:text-6xl">
-        Email campaigns that <span class="text-gradient">actually get sent</span>
-      </h1>
-      <p class="mx-auto mt-6 max-w-2xl text-base text-muted sm:text-lg">
-        Schedule campaigns, manage contacts, design templates, and track delivery — all from one professional platform. Connect your Gmail account and start sending in minutes.
-      </p>
-      <div class="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row sm:mt-10">
-        <a href="https://app.qwee.online" class="w-full rounded-xl bg-primary px-8 py-4 text-base font-semibold text-white shadow-lg shadow-primary/25 transition-smooth hover:bg-primary-dark hover:shadow-primary/40 sm:w-auto">
-          Get started free
-        </a>
-        <a href="#how-it-works" class="w-full rounded-xl border border-edge px-8 py-4 text-base font-semibold text-content transition-smooth hover:border-primary/50 hover:bg-surface sm:w-auto">
-          See how it works
-        </a>
+
+      <!-- Trust strip -->
+      <div class="reveal mt-16 border-t border-edge pt-6">
+        <p class="flex flex-wrap items-center gap-x-3 gap-y-2 text-sm text-muted">
+          <span>Sends from your address</span>
+          <span class="text-faint">·</span>
+          <span>Never reads your mailbox</span>
+          <span class="text-faint">·</span>
+          <span>No app passwords</span>
+          <span class="text-faint">·</span>
+          <span>Disconnect anytime</span>
+        </p>
       </div>
-      <p class="mt-6 text-sm text-muted">No credit card required · Connect Gmail in seconds</p>
     </div>
-  </section>
+  </header>
 
   <!-- Features -->
-  <section id="features" class="py-16 sm:py-24">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6">
-      <div class="mb-12 text-center sm:mb-16">
-        <h2 class="text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl">Everything you need to run email campaigns</h2>
-        <p class="mt-4 text-base text-muted sm:text-lg">Professional tools for contact management, template design, and delivery tracking.</p>
+  <section id="features" class="py-24 sm:py-32">
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="reveal mb-16 max-w-2xl">
+        <h2 class="font-display text-3xl font-medium leading-tight tracking-[-0.01em] sm:text-4xl">Everything you need, nothing you don't.</h2>
+        <p class="mt-4 text-lg text-muted">Professional tools for contact management, template design, and delivery tracking — built around your Gmail.</p>
       </div>
-      <div class="grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
-        <!-- Feature 1 -->
-        <div class="card-glow rounded-2xl border border-edge bg-card p-6 sm:p-8">
-          <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
-            <svg class="h-6 w-6 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M3 11l18-5v12L3 14v-3z"/>
-              <path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/>
-            </svg>
+
+      <div class="grid grid-cols-1 gap-px overflow-hidden border border-edge bg-edge lg:grid-cols-12">
+        <!-- Feature: Secure Gmail integration (differentiator, prominent) -->
+        <article class="reveal relative bg-base p-8 sm:p-10 lg:col-span-7 lg:row-span-1">
+          <span class="absolute left-0 top-0 h-0.5 w-12 bg-primary"></span>
+          <div class="flex items-center gap-3 text-xs font-medium uppercase tracking-[0.14em] text-faint">
+            <span class="font-display text-base text-content">01</span>
+            <span>Verified</span>
           </div>
-          <h3 class="text-lg font-semibold sm:text-xl">Campaign scheduling</h3>
-          <p class="mt-2 text-sm text-muted sm:text-base">Set send times, daily limits, and intervals. Qwee handles queueing, retries, and delivery automatically.</p>
-        </div>
-        <!-- Feature 2 -->
-        <div class="card-glow rounded-2xl border border-edge bg-card p-6 sm:p-8">
-          <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
-            <svg class="h-6 w-6 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
-              <circle cx="9" cy="7" r="4"/>
-              <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
-              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-            </svg>
+          <h3 class="font-display mt-5 text-2xl font-medium tracking-[-0.01em] sm:text-3xl">Secure Gmail integration</h3>
+          <p class="mt-4 max-w-md text-base leading-relaxed text-muted">Connect via Google OAuth with secure token refresh. Your credentials are encrypted and never stored in plaintext.</p>
+          <div class="mt-7 flex flex-wrap gap-2">
+            <span class="rounded-full border border-edge px-3 py-1 text-xs font-medium text-muted">gmail.send scope</span>
+            <span class="rounded-full border border-edge px-3 py-1 text-xs font-medium text-muted">AES-256 tokens</span>
+            <span class="rounded-full border border-edge px-3 py-1 text-xs font-medium text-muted">No app passwords</span>
           </div>
-          <h3 class="text-lg font-semibold sm:text-xl">Contact management</h3>
-          <p class="mt-2 text-sm text-muted sm:text-base">Organize contacts into lists, add custom fields, import via CSV, and prevent duplicate sends with automatic deduplication.</p>
-        </div>
-        <!-- Feature 3 -->
-        <div class="card-glow rounded-2xl border border-edge bg-card p-6 sm:p-8">
-          <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
-            <svg class="h-6 w-6 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
-              <polyline points="14 2 14 8 20 8"/>
-              <line x1="16" x2="8" y1="13" y2="13"/>
-              <line x1="16" x2="8" y1="17" y2="17"/>
-            </svg>
+        </article>
+
+        <!-- Feature: Campaign scheduling -->
+        <article class="reveal bg-base p-8 sm:p-10 lg:col-span-5">
+          <div class="flex items-center gap-3 text-xs font-medium uppercase tracking-[0.14em] text-faint">
+            <span class="font-display text-base text-content">02</span>
+            <span>Scheduling</span>
           </div>
-          <h3 class="text-lg font-semibold sm:text-xl">Template builder</h3>
-          <p class="mt-2 text-sm text-muted sm:text-base">Design professional email templates with a visual editor. Use merge tags to personalize each message automatically.</p>
-        </div>
-        <!-- Feature 4 -->
-        <div class="card-glow rounded-2xl border border-edge bg-card p-6 sm:p-8">
-          <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
-            <svg class="h-6 w-6 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"/>
-              <polyline points="12 6 12 12 16 14"/>
-            </svg>
+          <h3 class="font-display mt-5 text-2xl font-medium tracking-[-0.01em]">Campaign scheduling</h3>
+          <p class="mt-4 text-base leading-relaxed text-muted">Set send times, daily limits, and intervals. Qwee handles queueing, retries, and delivery automatically.</p>
+        </article>
+
+        <!-- Feature: Contact management -->
+        <article class="reveal bg-base p-8 sm:p-10 lg:col-span-4">
+          <div class="flex items-center gap-3 text-xs font-medium uppercase tracking-[0.14em] text-faint">
+            <span class="font-display text-base text-content">03</span>
+            <span>Contacts</span>
           </div>
-          <h3 class="text-lg font-semibold sm:text-xl">Delivery tracking</h3>
-          <p class="mt-2 text-sm text-muted sm:text-base">Monitor every email in real-time. Track sent, failed, queued, and retry statuses with detailed error reporting.</p>
-        </div>
-        <!-- Feature 5 -->
-        <div class="card-glow rounded-2xl border border-edge bg-card p-6 sm:p-8">
-          <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
-            <svg class="h-6 w-6 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-              <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
-            </svg>
+          <h3 class="font-display mt-5 text-xl font-medium tracking-[-0.01em]">Contact management</h3>
+          <p class="mt-4 text-base leading-relaxed text-muted">Organize contacts into lists, add custom fields, import via CSV, and prevent duplicate sends with automatic deduplication.</p>
+        </article>
+
+        <!-- Feature: Template builder -->
+        <article class="reveal bg-base p-8 sm:p-10 lg:col-span-4">
+          <div class="flex items-center gap-3 text-xs font-medium uppercase tracking-[0.14em] text-faint">
+            <span class="font-display text-base text-content">04</span>
+            <span>Templates</span>
           </div>
-          <h3 class="text-lg font-semibold sm:text-xl">Secure Gmail integration</h3>
-          <p class="mt-2 text-sm text-muted sm:text-base">Connect via Google OAuth with secure token refresh. Your credentials are encrypted and never stored in plaintext.</p>
-        </div>
-        <!-- Feature 6 -->
-        <div class="card-glow rounded-2xl border border-edge bg-card p-6 sm:p-8">
-          <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
-            <svg class="h-6 w-6 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-              <path d="M2 17l10 5 10-5"/>
-              <path d="M2 12l10 5 10-5"/>
-            </svg>
+          <h3 class="font-display mt-5 text-xl font-medium tracking-[-0.01em]">Template builder</h3>
+          <p class="mt-4 text-base leading-relaxed text-muted">Design professional email templates with a visual editor. Use merge tags to personalize each message automatically.</p>
+        </article>
+
+        <!-- Feature: Delivery tracking -->
+        <article class="reveal bg-base p-8 sm:p-10 lg:col-span-4">
+          <div class="flex items-center gap-3 text-xs font-medium uppercase tracking-[0.14em] text-faint">
+            <span class="font-display text-base text-content">05</span>
+            <span>Tracking</span>
           </div>
-          <h3 class="text-lg font-semibold sm:text-xl">Follow-up campaigns</h3>
-          <p class="mt-2 text-sm text-muted sm:text-base">Automatically identify recipients who haven't responded and send targeted follow-up emails without manual effort.</p>
-        </div>
+          <h3 class="font-display mt-5 text-xl font-medium tracking-[-0.01em]">Delivery tracking</h3>
+          <p class="mt-4 text-base leading-relaxed text-muted">Monitor every email in real-time. Track sent, failed, queued, and retry statuses with detailed error reporting.</p>
+        </article>
+
+        <!-- Feature: Follow-up campaigns (wide) -->
+        <article class="reveal bg-base p-8 sm:p-10 lg:col-span-12">
+          <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+            <div class="max-w-2xl">
+              <div class="flex items-center gap-3 text-xs font-medium uppercase tracking-[0.14em] text-faint">
+                <span class="font-display text-base text-content">06</span>
+                <span>Automation</span>
+              </div>
+              <h3 class="font-display mt-5 text-2xl font-medium tracking-[-0.01em] sm:text-3xl">Follow-up campaigns</h3>
+              <p class="mt-4 text-base leading-relaxed text-muted">Automatically identify recipients who haven't responded and send targeted follow-up emails without manual effort.</p>
+            </div>
+            <div class="flex shrink-0 items-center gap-2 text-sm text-faint">
+              <span class="h-2 w-2 rounded-full bg-primary/70"></span>
+              <span>Quiet, automatic, opt-out aware</span>
+            </div>
+          </div>
+        </article>
       </div>
     </div>
   </section>
 
   <!-- How it works -->
-  <section id="how-it-works" class="border-y border-edge/50 bg-surface/50 py-16 sm:py-24">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6">
-      <div class="mb-12 text-center sm:mb-16">
-        <h2 class="text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl">How it works</h2>
-        <p class="mt-4 text-base text-muted sm:text-lg">Three steps from sign-up to sent.</p>
+  <section id="how-it-works" class="border-y border-edge bg-surface py-24 sm:py-32">
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="reveal mb-16 max-w-2xl">
+        <h2 class="font-display text-3xl font-medium leading-tight tracking-[-0.01em] sm:text-4xl">Three steps from sign-up to sent.</h2>
+        <p class="mt-4 text-lg text-muted">No setup marathon. Connect, create, track.</p>
       </div>
-      <div class="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-12">
-        <div class="text-center">
-          <div class="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary text-xl font-bold text-white sm:h-16 sm:w-16 sm:text-2xl">1</div>
-          <h3 class="text-lg font-semibold sm:text-xl">Connect your Gmail</h3>
-          <p class="mt-2 text-sm text-muted sm:text-base">Sign in with Google and securely connect your Gmail account via OAuth. No app passwords needed.</p>
-        </div>
-        <div class="text-center">
-          <div class="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary text-xl font-bold text-white sm:h-16 sm:w-16 sm:text-2xl">2</div>
-          <h3 class="text-lg font-semibold sm:text-xl">Create your campaign</h3>
-          <p class="mt-2 text-sm text-muted sm:text-base">Import contacts, choose a template, set your schedule and daily limits. Qwee handles the rest.</p>
-        </div>
-        <div class="text-center">
-          <div class="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary text-xl font-bold text-white sm:h-16 sm:w-16 sm:text-2xl">3</div>
-          <h3 class="text-lg font-semibold sm:text-xl">Track delivery</h3>
-          <p class="mt-2 text-sm text-muted sm:text-base">Watch emails go out in real-time. Retry failed sends, monitor delivery rates, and follow up automatically.</p>
-        </div>
-      </div>
+
+      <ol class="grid grid-cols-1 gap-px overflow-hidden border border-edge bg-edge md:grid-cols-3">
+        <li class="reveal bg-surface p-8 sm:p-10">
+          <span class="font-display block text-5xl font-medium leading-none text-primary">01</span>
+          <h3 class="font-display mt-6 text-xl font-medium tracking-[-0.01em]">Connect your Gmail</h3>
+          <p class="mt-3 text-base leading-relaxed text-muted">Sign in with Google and securely connect your Gmail account via OAuth. No app passwords needed.</p>
+        </li>
+        <li class="reveal bg-surface p-8 sm:p-10">
+          <span class="font-display block text-5xl font-medium leading-none text-primary">02</span>
+          <h3 class="font-display mt-6 text-xl font-medium tracking-[-0.01em]">Create your campaign</h3>
+          <p class="mt-3 text-base leading-relaxed text-muted">Import contacts, choose a template, set your schedule and daily limits. Qwee handles the rest.</p>
+        </li>
+        <li class="reveal bg-surface p-8 sm:p-10">
+          <span class="font-display block text-5xl font-medium leading-none text-primary">03</span>
+          <h3 class="font-display mt-6 text-xl font-medium tracking-[-0.01em]">Track delivery</h3>
+          <p class="mt-3 text-base leading-relaxed text-muted">Watch emails go out in real-time. Retry failed sends, monitor delivery rates, and follow up automatically.</p>
+        </li>
+      </ol>
     </div>
   </section>
 
   <!-- CTA -->
-  <section class="py-16 sm:py-24">
-    <div class="mx-auto max-w-4xl px-4 sm:px-6">
-      <div class="card-glow rounded-3xl border border-primary/20 bg-gradient-to-br from-primary/10 to-card p-8 text-center sm:p-12">
-        <h2 class="text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl">Ready to start sending?</h2>
-        <p class="mx-auto mt-4 max-w-xl text-base text-muted sm:text-lg">Connect your Gmail account and launch your first campaign in under five minutes.</p>
-        <a href="https://app.qwee.online" class="mt-8 inline-block rounded-xl bg-primary px-8 py-4 text-base font-semibold text-white shadow-lg shadow-primary/25 transition-smooth hover:bg-primary-dark hover:shadow-primary/40">
-          Launch Qwee
-        </a>
+  <section class="py-28 sm:py-40">
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="reveal max-w-2xl">
+        <h2 class="font-display text-4xl font-medium leading-[1.08] tracking-[-0.02em] sm:text-5xl">Ready to send from <em class="italic font-normal text-primary">your</em> Gmail?</h2>
+        <p class="mt-6 text-lg text-muted">Connect your Gmail account and launch your first campaign in under five minutes.</p>
+        <div class="mt-10 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
+          <a href="https://app.qwee.online" class="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-white transition-smooth hover:bg-primary-dark">
+            Launch Qwee
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <span class="text-sm text-faint">No credit card required · Connect Gmail in seconds</span>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="border-t border-edge/50 py-12">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6">
-      <div class="flex flex-col items-center justify-between gap-8 md:flex-row">
-        <div class="flex items-center">
-          <img src="logo.png" alt="Qwee" class="h-7 w-auto">
-        </div>
-        <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-8">
+  <footer class="border-t border-edge py-14">
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
+        <a href="/" class="flex items-center" aria-label="Qwee home">
+          <img src="logo.png" alt="Qwee" class="h-6 w-auto">
+        </a>
+        <nav class="flex flex-wrap items-center gap-x-7 gap-y-3" aria-label="Footer">
           <a href="privacy.html" class="text-sm text-muted transition-smooth hover:text-content">Privacy Policy</a>
           <a href="terms.html" class="text-sm text-muted transition-smooth hover:text-content">Terms of Service</a>
           <a href="https://app.qwee.online" class="text-sm text-muted transition-smooth hover:text-content">Sign in</a>
-        </div>
+        </nav>
       </div>
-      <div class="mt-8 border-t border-edge/30 pt-8 text-center">
-        <p class="text-sm text-muted">&copy; 2026 Qwee. All rights reserved.</p>
-        <p class="mt-2 text-sm text-muted">Support: <a href="mailto:muhsinkoodali856@gmail.com" class="text-primary transition-smooth hover:text-primary-dark">muhsinkoodali856@gmail.com</a></p>
+      <div class="mt-10 border-t border-edge/60 pt-6 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+        <p class="text-sm text-faint">&copy; 2026 Qwee. All rights reserved.</p>
+        <p class="text-sm text-faint">Support: <a href="mailto:muhsinkoodali856@gmail.com" class="text-muted transition-smooth hover:text-primary">muhsinkoodali856@gmail.com</a></p>
       </div>
     </div>
   </footer>
+
+  <script>
+    (function () {
+      var els = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window) || els.length === 0) {
+        els.forEach(function (el) { el.classList.add('is-visible'); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+      els.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
 
 </body>
 </html>
