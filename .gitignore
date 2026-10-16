@@ -1,1 +1,57 @@
+# Dependencies
 node_modules/
+
+# Local environment and credentials
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials*.json
+client_secret*.json
+
+# Logs and tool caches
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+.cache/
+.npm/
+.eslintcache
+.stylelintcache
+*.tsbuildinfo
+
+# Build, test, and hosting output
+dist/
+build/
+coverage/
+.nyc_output/
+.vercel/
+.netlify/
+
+# Local editor and coding assistant state
+.vscode/
+.idea/
+.codeartsdoer/
+.kilo/
+*.swp
+*.swo
+*~
+
+# Operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Local backups and archives
+*.bak
+*.orig
+*.rej
+*.bundle
+
+# src/output.css is deliberately tracked for static hosting.
+# package-lock.json is deliberately tracked for reproducible installs.
